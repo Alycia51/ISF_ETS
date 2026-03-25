@@ -1,0 +1,63 @@
+extends ../layouts/base
+
+block content
+
+  //- ── HERO ──────────────────────────────────────────────────
+  section.hero
+    .container.hero__grid
+      .hero__content
+        h1.hero__title #{t.home.heroTitle}
+        p.hero__subtitle #{t.home.heroSubtitle}
+        .hero__actions
+          a.btn.btn--primary(href=`/${locale}/contact`) #{t.home.heroBtn}
+          a.btn.btn--outline(href=`/${locale}/mission`) #{t.home.aboutBtn}
+      .hero__visual
+        .globe-wrap
+          .globe-ring
+          .globe-ring
+          .globe-ring
+          .globe-emoji 🌍
+
+  //- ── STATS ──────────────────────────────────────────────────
+  section.impact-stats
+    .container
+      .section-header
+        h2 #{t.home.impactTitle}
+        p #{t.home.impactSubtitle}
+      .stats-grid
+        each stat in t.home.impactStats
+          .stat-item
+            h3.stat-number #{stat.number}
+            p.stat-label #{stat.label}
+
+  //- ── À PROPOS ───────────────────────────────────────────────
+  section.about-preview
+    .container.about__grid
+      .about__image
+        .placeholder-img 🌍
+      .about__text
+        h2 #{t.home.aboutTitle}
+        p #{t.home.aboutText}
+        a.link-more(href=`/${locale}/mission`) #{t.home.aboutBtn} →
+
+  //- ── FAQ ────────────────────────────────────────────────────
+  section.faq-section
+    .container
+      .section-header
+        h2 #{t.home.faqTitle}
+      .faq-list
+        each item, i in t.home.faqItems
+          .faq-item(data-index=i)
+            button.faq-question(type='button')
+              span #{item.q}
+              span.faq-icon +
+            .faq-answer
+              p #{item.a}
+
+  //- ── JOIN CTA ───────────────────────────────────────────────
+  section.join-cta
+    .container
+      .cta-card
+        h2 #{t.home.joinTitle}
+        p #{t.home.joinText}
+        a.btn.btn--white(href=`/${locale}/contact`) #{t.home.joinBtn}

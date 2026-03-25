@@ -1,0 +1,37 @@
+{
+    "name": "isf-ets",
+    "version": "1.0.0",
+    "description": "Site web du club ISF de l'ÉTS - Ingénieurs Sans Frontières",
+    "main": "dist/server.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "dev": "ts-node src/server.ts"
+    },
+    "dependencies": {
+        "express": "^4.22.1",
+        "nodemailer": "^6.6.3",
+        "pug": "^3.0.4"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.25",
+        "@types/node": "^20.19.37",
+        "@types/nodemailer": "^6.4.14",
+        "@types/pug": "^2.0.10",
+        "nodemon": "^3.1.14",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Alycia51/ISF_ETS.git"
+    },
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Alycia51/ISF_ETS/issues"
+    },
+    "homepage": "https://github.com/Alycia51/ISF_ETS#readme"
+}

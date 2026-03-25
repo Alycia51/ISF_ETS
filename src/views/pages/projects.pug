@@ -1,0 +1,18 @@
+extends ../layouts/base
+
+block content
+  section.page-hero
+    .container
+      h1 #{t.projects.title}
+      p #{t.projects.subtitle}
+
+  section.projects-section
+    .container
+      .projects-grid
+        each item in t.projects.items
+          .project-card
+            .project-tag #{item.tag}
+            .project-body
+              span.project-meta 📍 #{item.location} &nbsp;|&nbsp; #{item.year}
+              h3 #{item.title}
+              p #{item.description}

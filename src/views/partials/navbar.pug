@@ -1,0 +1,24 @@
+nav.navbar
+  .container
+    a.logo(href=`/${locale}`)
+      img(src='/images/logo.png' alt='ISF ÉTS')
+      span.logo-text
+        span.l1 ISF
+        span.l2 ÉTS
+
+    button.nav-toggle(id='navToggle' aria-label='Menu')
+      span
+      span
+      span
+
+    ul#navLinks.nav-links
+      li: a(href=`/${locale}` class=page==='home'?'active':'') #{t.nav.home}
+      li: a(href=`/${locale}/mission` class=page==='mission'?'active':'') #{t.nav.mission}
+      li: a(href=`/${locale}/realisations` class=page==='projects'?'active':'') #{t.nav.projects}
+      li: a(href=`/${locale}/evenements` class=page==='events'?'active':'') #{t.nav.events}
+      li: a(href=`/${locale}/membres` class=page==='members'?'active':'') #{t.nav.members}
+      li: a(href=`/${locale}/contact` class=page==='contact'?'active':'') #{t.nav.contact}
+
+    .lang-switcher
+      each loc in availableLocales
+        a(href=`/${loc.code}` class=locale===loc.code?'active':'') #{loc.label}

@@ -1,0 +1,21 @@
+extends ../layouts/base
+
+block content
+  section.page-hero
+    .container
+      h1 #{t.events.title}
+      p #{t.events.subtitle}
+
+  section.events-section
+    .container
+      .events-list
+        each event in t.events.upcoming
+          .event-card
+            .event-date
+              span.day #{event.date}
+              span.month #{event.month}
+            .event-info
+              span.event-type #{event.type}
+              h3 #{event.title}
+              p.event-location 📍 #{event.location}
+              p #{event.description}

@@ -1,0 +1,26 @@
+extends ../layouts/base
+
+block content
+  section.page-hero
+    .container
+      h1 #{t.members.title}
+      p #{t.members.subtitle}
+
+  section.members-section
+    .container
+      h2.section-title #{t.members.boardTitle}
+      .board-grid
+        each member in t.members.board
+          .member-card
+            .member-avatar
+              | #{member.name[0]}
+            h3 #{member.name}
+            p.member-role #{member.role}
+            p.member-program #{member.program}
+
+  section.cta-section
+    .container
+      .cta-inner
+        h2 #{t.members.joinTitle}
+        p #{t.members.joinText}
+        a.btn.btn--white(href=`/${locale}/contact`) #{t.members.joinBtn}

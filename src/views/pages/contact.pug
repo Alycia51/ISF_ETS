@@ -1,0 +1,53 @@
+extends ../layouts/base
+
+block content
+  section.page-hero
+    .container
+      h1 #{t.contact.title}
+      p #{t.contact.subtitle}
+
+  section.contact-section
+    .container.contact-grid
+      .contact-form-wrap
+        .alert-success#successMsg #{t.contact.successMsg}
+        .form-row
+          .form-group
+            label Nom
+            input(type='text' name='name' placeholder=t.contact.namePlaceholder)
+          .form-group
+            label Courriel
+            input(type='email' name='email' placeholder=t.contact.emailPlaceholder)
+        .form-group
+          label #{t.contact.subjectLabel}
+          select(name='subject')
+            each opt in t.contact.subjectOptions
+              option #{opt}
+        .form-group
+          label Message
+          textarea(name='message' rows='6' placeholder=t.contact.messagePlaceholder)
+        button.btn.btn--primary(id='submitBtn') #{t.contact.sendBtn}
+
+      .contact-sidebar
+        .info-card
+          h3 #{t.contact.infoTitle}
+          .info-row
+            .info-icon 📧
+            .info-text
+              strong Courriel
+              span #{t.contact.email}
+          .info-row
+            .info-icon 📍
+            .info-text
+              strong Adresse
+              span #{t.contact.address}
+          .info-row
+            .info-icon 📅
+            .info-text
+              strong Réunions
+              span Jeudi soir, aux 2 semaines
+        .social-card
+          h3 #{t.footer.followUs}
+          .social-list
+            a.social-link(href='https://www.instagram.com/isf_ets/' target='_blank') 📸 &nbsp; Instagram
+            a.social-link(href='https://www.facebook.com/ISFdETS' target='_blank') 👍 &nbsp; Facebook
+            a.social-link(href='https://www.linkedin.com/company/isf-ets' target='_blank') 💼 &nbsp; LinkedIn

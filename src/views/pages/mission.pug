@@ -1,0 +1,27 @@
+extends ../layouts/base
+
+block content
+  section.page-hero
+    .container
+      h1 #{t.mission.title}
+      p #{t.mission.subtitle}
+
+  section.pillars-section
+    .container
+      h2.section-title #{t.mission.pillarTitle}
+      .grid-2x2
+        each pillar in t.mission.pillars
+          .pillar-card
+            span.icon #{pillar.icon}
+            h3 #{pillar.title}
+            p #{pillar.text}
+
+  section.values-section
+    .container
+      h2.section-title #{t.mission.valuesTitle}
+      .grid-2x2
+        each val in t.mission.values
+          .value-card
+            span.icon #{val.icon}
+            h4 #{val.title}
+            p #{val.text}

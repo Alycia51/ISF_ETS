@@ -1,0 +1,26 @@
+footer.footer
+  .container
+    .footer-inner
+      .footer-brand
+        h4 ISF ÉTS
+        p #{t.footer.description}
+        .footer-socials
+          a(href='https://www.instagram.com/isfetsmtl/' target='_blank' rel='noopener') IG
+          a(href='https://www.facebook.com/isfetsmtl/?locale=fr_FR' target='_blank' rel='noopener') FB
+          a(href='https://www.linkedin.com/company/ing%C3%A9nieurs-sans-fronti%C3%A8res-isf-canada-section-%C3%A9ts/posts/?feedView=all' target='_blank' rel='noopener') LI
+      .footer-nav
+        h4 #{t.footer.quickLinks}
+        ul
+          li: a(href=`/${locale}`) #{t.nav.home}
+          li: a(href=`/${locale}/mission`) #{t.nav.mission}
+          li: a(href=`/${locale}/realisations`) #{t.nav.projects}
+          li: a(href=`/${locale}/evenements`) #{t.nav.events}
+          li: a(href=`/${locale}/membres`) #{t.nav.members}
+          li: a(href=`/${locale}/contact`) #{t.nav.contact}
+      .footer-contact
+        h4 Contact
+        p 📧 isf@ens.etsmtl.ca
+        p 📍 1100 Notre-Dame O.
+        p Montréal, QC H3C 1K3
+    .footer-bottom
+      p &copy; 2026 ISF ÉTS — #{t.footer.rights}
