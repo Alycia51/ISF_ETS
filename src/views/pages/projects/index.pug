@@ -1,0 +1,17 @@
+extends ../../layouts/base
+
+block content
+  header.page-header
+    .container
+      h1 #{t.projects.title}
+      p #{t.projects.subtitle}
+
+  section.projects-index
+    .container
+      .projects-index-grid
+        each key, label in {histoire: t.nav.projectsDropdown.histoire, carrieres: t.nav.projectsDropdown.carrieres, regards: t.nav.projectsDropdown.regards, collecte: t.nav.projectsDropdown.collecte, autres: t.nav.projectsDropdown.autres}
+          a.project-index-card(href=`/${locale}/realisations/${key}`)
+            .pic-card-wrap
+              .pic-card
+                .pic-card-photo
+                .pic-card-label #{label}

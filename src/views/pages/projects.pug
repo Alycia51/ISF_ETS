@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 block content
-  section.page-hero
+  header.page-header
     .container
       h1 #{t.projects.title}
       p #{t.projects.subtitle}
@@ -9,10 +9,20 @@ block content
   section.projects-section
     .container
       .projects-grid
-        each item in t.projects.items
-          .project-card
+        each item, i in t.projects.items
+          .project-card(data-index=`${i}`)
             .project-tag #{item.tag}
             .project-body
               span.project-meta 📍 #{item.location} &nbsp;|&nbsp; #{item.year}
               h3 #{item.title}
               p #{item.description}
+
+  //- Modal séparée — en dehors du grid
+  .projects-backdrop(id='projectsBackdrop')
+  .project-modal(id='projectModal')
+    button.project-modal-close(id='projectModalClose' type='button') ✕
+    .project-exp-tag(id='modalTag')
+    .project-exp-meta(id='modalMeta')
+    h3.project-exp-title(id='modalTitle')
+    p.project-exp-desc(id='modalDesc')
+    .project-exp-gallery(id='modalGallery')

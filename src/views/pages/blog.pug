@@ -1,0 +1,45 @@
+extends ../layouts/base
+
+block content
+  header.page-header
+    .container
+      h1 #{t.blog.title}
+      p #{t.blog.subtitle}
+
+  section.blog-section
+    .container
+      .blog-intro
+        p.blog-intro-text 🎙️ #{t.blog.introText || 'Découvrez nos épisodes — survolez pour explorer, cliquez pour en savoir plus.'}
+
+      .fan-stage
+        .fan-container(id='fanContainer')
+          each podcast, i in t.blog.podcasts
+            .podcast-card(data-index=`${i}` data-members=JSON.stringify(podcast.members || []))
+              .card-thumb-link(data-url=podcast.url)
+                .card-thumbnail
+                  if podcast.thumbnail
+                    img(src=podcast.thumbnail alt=podcast.title)
+                  else
+                    .card-thumb-placeholder 🎙️
+              .card-body
+                h3.card-title #{podcast.title}
+                p.card-guest 👤 #{podcast.guest}
+                p.card-desc #{podcast.description}
+
+      .blog-backdrop(id='blogBackdrop')
+
+      //- Modal podcast — séparée du fan
+      .podcast-modal(id='podcastModal')
+        button.podcast-modal-close(id='podcastModalClose' type='button') ✕
+        .podcast-modal-thumb(id='modalThumb')
+          .card-thumb-placeholder-lg 🎙️
+        .podcast-modal-body
+          h3.podcast-modal-title(id='modalTitle')
+          p.podcast-modal-guest(id='modalGuest')
+          p.podcast-modal-desc(id='modalDesc')
+          .podcast-modal-members(id='modalMembers' style='display:none')
+            p.card-members-title 🎓 Membres ISF participants
+            ul.podcast-modal-members-list(id='modalMembersList')
+          a.card-watch-btn(id='modalWatchBtn' href='#' target='_blank' rel='noopener') ▶ Regarder le podcast
+
+      p.fan-hint ← Glisser votre souris pour parcourir les épisodes · Cliquez pour en savoir plus →

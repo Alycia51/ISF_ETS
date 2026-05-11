@@ -5,7 +5,15 @@ export interface Translation {
     projects: string;
     events: string;
     members: string;
+    blog: string;
     contact: string;
+    projectsDropdown: {
+      histoire:  string;
+      carrieres: string;
+      regards:   string;
+      collecte:  string;
+      autres:    string;
+    };
   };
   home: {
     heroTitle: string;
@@ -34,10 +42,16 @@ export interface Translation {
     values: { icon: string; title: string; text: string }[];
   };
   projects: {
-    title: string;
-    subtitle: string;
-    items: { title: string; location: string; year: string; description: string; tag: string }[];
+  title: string;
+  subtitle: string;
+  categories: {
+    histoire:  { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    carrieres: { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    regards:   { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    collecte:  { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    autres:    { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
   };
+};
   events: {
     title: string;
     subtitle: string;
@@ -52,6 +66,12 @@ export interface Translation {
     joinTitle: string;
     joinText: string;
     joinBtn: string;
+  };
+  blog: {
+    title: string;
+    subtitle: string;
+    introText: string;
+    podcasts: { title: string; guest: string; description: string; longDescription?: string; members?: string[]; url: string; thumbnail: string }[];
   };
   contact: {
     title: string;

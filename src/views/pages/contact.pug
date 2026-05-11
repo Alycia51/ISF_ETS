@@ -1,7 +1,8 @@
 extends ../layouts/base
 
 block content
-  section.page-hero
+  //section.page-hero
+  header.page-header
     .container
       h1 #{t.contact.title}
       p #{t.contact.subtitle}
@@ -40,14 +41,9 @@ block content
             .info-text
               strong Adresse
               span #{t.contact.address}
-          .info-row
-            .info-icon 📅
-            .info-text
-              strong Réunions
-              span Jeudi soir, aux 2 semaines
         .social-card
           h3 #{t.footer.followUs}
           .social-list
-            a.social-link(href='https://www.instagram.com/isf_ets/' target='_blank') 📸 &nbsp; Instagram
-            a.social-link(href='https://www.facebook.com/ISFdETS' target='_blank') 👍 &nbsp; Facebook
-            a.social-link(href='https://www.linkedin.com/company/isf-ets' target='_blank') 💼 &nbsp; LinkedIn
+            a.social-link(href='https://www.instagram.com/isfetsmtl/' target='_blank') 📸 &nbsp; Instagram
+            a.social-link(href='https://www.facebook.com/isfetsmtl/?locale=fr_FR' target='_blank') 👍 &nbsp; Facebook
+            a.social-link(href='https://www.linkedin.com/company/ing%C3%A9nieurs-sans-fronti%C3%A8res-isf-canada-section-%C3%A9ts/posts/?feedView=all' target='_blank') 💼 &nbsp; LinkedIn

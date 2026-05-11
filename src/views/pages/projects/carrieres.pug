@@ -1,0 +1,50 @@
+extends ../../layouts/base
+
+block content
+  - var aboutLabel    = locale === 'en' ? 'About' : locale === 'es' ? 'Acerca de' : 'À propos'
+  - var partnersLabel = locale === 'en' ? 'Our partners' : locale === 'es' ? 'Nuestros socios' : 'Merci à nos partenaires'
+  - var cat = t.projects.categories.carrieres
+
+  header.page-header
+    .container
+      h1 #{cat.title}
+      p #{cat.subtitle}
+
+  section.project-detail
+    .container
+      .project-detail-layout
+
+        //- Gauche : description
+        .project-desc
+          h2.detail-section-title #{aboutLabel}
+          p.typed-text(data-text=cat.description)
+
+          if cat.partners.length
+            .partners-section
+              h3.partners-title #{partnersLabel}
+              .partners-grid
+                each partner in cat.partners
+                  .partner-card
+                    if partner.logo
+                      img(src=partner.logo alt=partner.name)
+                    else
+                      .partner-logo-placeholder 🤝
+                    span.partner-name #{partner.name}
+
+        //- Droite : cartes photo vintage par année décroissant
+        .project-photos
+          .vintage-cards-row
+            .vintage-card
+              .vintage-card-inner
+                .vintage-photo-area
+                  img(src='/images/realisations/carrieres-2026.jpg' alt='2026' onerror="this.parentElement.innerHTML='📷'")
+                .vintage-card-footer
+                  span 2026
+              .vintage-card-shine
+            .vintage-card
+              .vintage-card-inner
+                .vintage-photo-area
+                  img(src='/images/realisations/carrieres-2025.jpg' alt='2025' onerror="this.parentElement.innerHTML='📷'")
+                .vintage-card-footer
+                  span 2025
+              .vintage-card-shine

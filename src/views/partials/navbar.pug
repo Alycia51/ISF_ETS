@@ -1,4 +1,4 @@
-nav.navbar
+nav.navbar(id='navbar')
   .container
     a.logo(href=`/${locale}`)
       img(src='/images/logo.png' alt='ISF ÉTS')
@@ -14,11 +14,28 @@ nav.navbar
     ul#navLinks.nav-links
       li: a(href=`/${locale}` class=page==='home'?'active':'') #{t.nav.home}
       li: a(href=`/${locale}/mission` class=page==='mission'?'active':'') #{t.nav.mission}
-      li: a(href=`/${locale}/realisations` class=page==='projects'?'active':'') #{t.nav.projects}
+      li.nav-item-dropdown
+        button.nav-dropdown-btn(type='button' class=page==='projects'?'active':'')
+          | #{t.nav.projects}
+          span.nav-dropdown-arrow ▾
+        .nav-dropdown-menu
+          a(href=`/${locale}/realisations/notre-histoire`) #{t.nav.projectsDropdown.histoire}
+          a(href=`/${locale}/realisations/carrieres`)      #{t.nav.projectsDropdown.carrieres}
+          a(href=`/${locale}/realisations/regards`)        #{t.nav.projectsDropdown.regards}
+          a(href=`/${locale}/realisations/collecte`)       #{t.nav.projectsDropdown.collecte}
+          a(href=`/${locale}/realisations/autres`)         #{t.nav.projectsDropdown.autres}
       li: a(href=`/${locale}/evenements` class=page==='events'?'active':'') #{t.nav.events}
       li: a(href=`/${locale}/membres` class=page==='members'?'active':'') #{t.nav.members}
+      li: a(href=`/${locale}/blogue` class=page==='blog'?'active':'') #{t.nav.blog}
       li: a(href=`/${locale}/contact` class=page==='contact'?'active':'') #{t.nav.contact}
+      li.nav-langs-mobile
+        each loc in availableLocales
+          a(href=`/${loc.code}` class=locale===loc.code?'active':'') #{loc.label}
 
-    .lang-switcher
-      each loc in availableLocales
-        a(href=`/${loc.code}` class=locale===loc.code?'active':'') #{loc.label}
+    .lang-dropdown
+      button.lang-btn(id='langToggle' type='button') 🌐
+      .lang-menu(id='langMenu')
+        each loc in availableLocales
+          a.lang-option(href=`/${loc.code}` class=locale===loc.code?'active':'')
+            
+            span #{loc.label}
