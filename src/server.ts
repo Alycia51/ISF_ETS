@@ -80,6 +80,7 @@ app.post('/api/contact', async (req: Request, res: Response) => {
 // 404 fallback
 app.use((_req: Request, res: Response) => res.redirect('/fr'));
 
-app.listen(3000, () => console.log('✅ ISF ÉTS → http://localhost:3000'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`ISF ÉTS → http://localhost:${PORT}`));
 
 export default app;
