@@ -151,7 +151,7 @@ export const fr: Translation = {
       { name: 'Wimi Brenda Neila Houndonougbo',   role: 'Déléguée partenariat',                      program: 'Génie de la construction' },
       { name: 'Moumi Ngamaleu-Mbesse',            role: 'Déléguée partenariat & Co-directrice web',  program: 'Génie électrique' },
       { name: 'Marckens Victor',                  role: 'Délégué partenariat',                       program: 'Baccalauréat en comptabilité' },
-      { name: 'Simon Assè-Fètou Yaka',           role: 'Délégué ingénierie',                         program: 'Doctorat en génie de la construction' },
+      { name: 'Simon Assè-Fètou Yaka',            role: 'Délégué ingénierie',                        program: 'Doctorat en génie de la construction' },
       { name: 'Hassanatou Baldé',                 role: 'Déléguée ingénierie',                       program: 'Génie de la construction' },
       { name: 'Thierry Noutcha Noutcha',          role: 'Délégué événementiel',                      program: 'DESS en gestion de l’innovation ' },
       { name: 'Babitha Vythilingam',              role: 'Déléguée marketing',                        program: 'Génie logiciel' },
