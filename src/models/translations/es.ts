@@ -144,7 +144,6 @@ export const es: Translation = {
       { name: 'Clara St-Leger',                   role: 'VP Eventos',                                  program: 'Ingeniería de la construcción' },
       { name: 'Alycia Ben Ihaddadene',            role: 'VP Eventos & Directora web',                  program: 'Ingeniería de software' },
       { name: 'Wimi Brenda Neila Houndonougbo',   role: 'Delegada de alianzas',                        program: 'Ingeniería de la construcción' },
-      { name: 'Moumi Ngamaleu-Mbesse',            role: 'Delegada de alianzas & Co-directora web',     program: 'Ingeniería eléctrica' },
       { name: 'Marckens Victor',                  role: 'Delegado de alianzas',                        program: 'Licenciatura en contabilidad' },
       { name: 'Simon Assè-Fètou Yaka',            role: 'Delegado de ingeniería',                      program: 'Doctorado en ingeniería de la construcción' },
       { name: 'Hassanatou Baldé',                 role: 'Delegada de ingeniería',                      program: 'Ingeniería de la construcción' },
