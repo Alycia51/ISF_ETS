@@ -1,4 +1,7 @@
-import 'dotenv/config';
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 import express, { Request, Response } from 'express';
 import path from 'path';
 import nodemailer from 'nodemailer';
