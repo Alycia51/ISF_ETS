@@ -4,10 +4,6 @@ import nodemailer from 'nodemailer';
 import { PagePresentation } from './presentation/pagePresentation';
 import { Locale } from './models/types';
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
 const mailer = nodemailer.createTransport({
   host: 'smtp.office365.com',
   port: 587,
