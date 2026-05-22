@@ -9,6 +9,7 @@
         "dev": "ts-node src/server.ts"
     },
     "dependencies": {
+        "dotenv": "^17.4.2",
         "express": "^4.22.1",
         "nodemailer": "^6.6.3",
         "pug": "^3.0.4"
