@@ -78,6 +78,20 @@ app.post('/api/contact', async (req: Request, res: Response) => {
   }
 });
 
+app.get('/sitemap.xml', (_req: Request, res: Response) => {
+  res.header('Content-Type', 'application/xml');
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://isf-ets.ca/fr</loc></url>
+  <url><loc>https://isf-ets.ca/fr/mission</loc></url>
+  <url><loc>https://isf-ets.ca/fr/realisations</loc></url>
+  <url><loc>https://isf-ets.ca/fr/evenements</loc></url>
+  <url><loc>https://isf-ets.ca/fr/membres</loc></url>
+  <url><loc>https://isf-ets.ca/fr/blogue</loc></url>
+  <url><loc>https://isf-ets.ca/fr/contact</loc></url>
+</urlset>`);
+});
+
 // 404 fallback
 app.use((_req: Request, res: Response) => res.redirect('/fr'));
 
