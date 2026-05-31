@@ -279,31 +279,54 @@ document.addEventListener('DOMContentLoaded', () => {
     typeObs.observe(typedEl);
   }
 
-  // ── Album shadowbox ──
+  // ── Album shadowbox (générique — fonctionne pour histoire ET collecte) ──
   const openAlbum = document.getElementById('openAlbum2026');
-  const albumBackdrop = document.getElementById('albumBackdrop');
-  const albumModal = document.getElementById('albumModal');
-  const albumClose = document.getElementById('albumClose');
-
-  if (openAlbum && albumModal) {
-    openAlbum.addEventListener('click', () => {
-      albumModal.classList.add('open');
-      albumBackdrop.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-    const closeAlbum = () => {
-      albumModal.classList.remove('open');
-      albumBackdrop.classList.remove('open');
-      document.body.style.overflow = '';
-      // Pause la vidéo
-      const vid = albumModal.querySelector('video');
-      if (vid) vid.pause();
-    };
-    albumClose?.addEventListener('click', closeAlbum);
-    albumBackdrop?.addEventListener('click', closeAlbum);
+  if (openAlbum) {
+    const albumBackdrop = document.getElementById('albumBackdrop');
+    const albumModal    = document.getElementById('albumModal');
+    const albumClose    = document.getElementById('albumClose');
+    if (albumModal) {
+      openAlbum.addEventListener('click', () => {
+        albumModal.classList.add('open');
+        albumBackdrop.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      const closeAlbum = () => {
+        albumModal.classList.remove('open');
+        albumBackdrop.classList.remove('open');
+        document.body.style.overflow = '';
+        const vid = albumModal.querySelector('video');
+        if (vid) vid.pause();
+      };
+      albumClose?.addEventListener('click', closeAlbum);
+      albumBackdrop?.addEventListener('click', closeAlbum);
+    }
   }
 
-  // ── Lightbox photos (dans l'album) ──
+  // Cartes vintage avec data-edition (collecte)
+  document.querySelectorAll('.vintage-card[data-edition]').forEach(card => {
+    const year = card.dataset.edition;
+    const backdrop = document.getElementById(`backdrop-${year}`);
+    const modal    = document.getElementById(`modal-${year}`);
+    if (!modal) return;
+
+    card.addEventListener('click', () => {
+      modal.classList.add('open');
+      backdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    const closeBtn = modal.querySelector('.album-close');
+    const closeModal = () => {
+      modal.classList.remove('open');
+      backdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    closeBtn?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+  });
+
+  // ── Lightbox photos ──
   const lightbox = document.getElementById('lightbox');
   const lightboxContent = document.getElementById('lightboxContent');
   const lightboxClose = document.getElementById('lightboxClose');
@@ -318,7 +341,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const idx = parseInt(thumb.dataset.index || '0');
       if (!sections[section]) sections[section] = [];
       sections[section][idx] = thumb.dataset.src;
-
       thumb.addEventListener('click', () => openLightbox(section, idx));
     });
 
@@ -343,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeLightbox() {
       lightbox.classList.remove('open');
       lightboxContent.innerHTML = '';
-      document.body.style.overflow = 'hidden'; // garde l'album ouvert
+      document.body.style.overflow = 'hidden';
     }
 
     lightboxClose?.addEventListener('click', closeLightbox);

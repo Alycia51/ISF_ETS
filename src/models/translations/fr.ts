@@ -134,6 +134,24 @@ export const fr: Translation = {
         description: 'La collecte de vêtements ISF ÉTS est un effort annuel de solidarité qui permet de recueillir des centaines de vêtements redistribués à des organismes locaux et internationaux. Simple, efficace, et directement utile.',
         partners: [],
         photos: [],
+        video: '',
+        editions: [
+          {
+            year: '2025',
+            cover: '/images/realisations/collecte/2025/Image.jpg',
+            photos: [
+              '/images/realisations/collecte/2025/Image.jpg',
+              '/images/realisations/collecte/2025/Image-2.jpg',
+            ],
+          },
+          {
+            year: '2024',
+            cover: '/images/realisations/collecte/2024/Image (1).png',
+            photos: [
+              '/images/realisations/collecte/2024/Image (1).png',
+            ],
+          },
+        ],
       },
       autres: {
         label: 'Autres',

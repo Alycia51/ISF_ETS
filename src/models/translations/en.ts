@@ -131,7 +131,26 @@ export const en: Translation = {
         title: 'Clothing Drive',
         subtitle: 'Giving your clothes a second life.',
         description: 'The ISF ÉTS clothing drive is an annual solidarity effort that collects hundreds of garments redistributed to local and international organizations. Simple, effective, and directly useful.',
-        partners: [], photos: [],
+        partners: [], 
+        photos: [],
+        video: '',
+        editions: [
+          {
+            year: '2025',
+            cover: '/images/realisations/collecte/2025/Image.jpg',
+            photos: [
+              '/images/realisations/collecte/2025/Image.jpg',
+              '/images/realisations/collecte/2025/Image-2.jpg',
+            ],
+          },
+          {
+            year: '2024',
+            cover: '/images/realisations/collecte/2024/Image (1).png',
+            photos: [
+              '/images/realisations/collecte/2024/Image (1).png',
+            ],
+          },
+        ],
       },
       autres: {
         label: 'Other',

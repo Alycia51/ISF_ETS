@@ -14,12 +14,11 @@ block content
     .container
       .project-detail-layout
 
-        //- Gauche : description
+        //- Gauche : description + partenaires
         .project-desc
           h2.detail-section-title #{aboutLabel}
           p.typed-text(data-text=cat.description)
-
-          if cat.partners.length
+          if cat.partners && cat.partners.length
             .partners-section
               h3.partners-title #{partnersLabel}
               .partners-grid
@@ -31,20 +30,41 @@ block content
                       .partner-logo-placeholder 🤝
                     span.partner-name #{partner.name}
 
-        //- Droite : cartes photo vintage par année décroissant
+        //- Droite : cartes vintage par édition
         .project-photos
           .vintage-cards-row
-            .vintage-card
-              .vintage-card-inner
-                .vintage-photo-area
-                  img(src='/images/realisations/collecte-2026.jpg' alt='2026' onerror="this.parentElement.innerHTML='📷'")
-                .vintage-card-footer
-                  span 2026
-              .vintage-card-shine
-            .vintage-card
-              .vintage-card-inner
-                .vintage-photo-area
-                  img(src='/images/realisations/collecte-2025.jpg' alt='2025' onerror="this.parentElement.innerHTML='📷'")
-                .vintage-card-footer
-                  span 2025
-              .vintage-card-shine
+            each edition in cat.editions || []
+              .vintage-card(data-edition=edition.year style='cursor:pointer')
+                .vintage-card-inner
+                  .vintage-photo-area
+                    img(src=edition.cover alt=edition.year onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
+                    .coming-soon-card(style='display:none')
+                      span.coming-soon-camera 📷
+                      .coming-soon-text
+                        span À venir
+                        span.dots
+                          span .
+                          span .
+                          span .
+                  .vintage-card-footer
+                    span #{edition.year}
+                .vintage-card-shine
+
+  //- Shadowbox par édition
+  each edition in cat.editions || []
+    .album-backdrop(id=`backdrop-${edition.year}`)
+    .album-modal(id=`modal-${edition.year}`)
+      button.album-close(data-year=edition.year type='button') ✕
+      .album-section
+        h3.album-section-title Collecte #{edition.year}
+        .album-grid
+          each photo, i in edition.photos
+            .album-thumb(data-src=photo data-section=`collecte-${edition.year}` data-index=i)
+              img(src=photo alt=`Collecte ${edition.year}`)
+
+  //- Lightbox
+  .lightbox(id='lightbox')
+    button.lightbox-close(id='lightboxClose') ✕
+    button.lightbox-prev(id='lightboxPrev') ‹
+    button.lightbox-next(id='lightboxNext') ›
+    .lightbox-content(id='lightboxContent')

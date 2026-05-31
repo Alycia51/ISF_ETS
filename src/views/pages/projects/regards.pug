@@ -37,14 +37,15 @@ block content
             .vintage-card
               .vintage-card-inner
                 .vintage-photo-area
-                  img(src='/images/realisations/regards-2026.jpg' alt='2026' onerror="this.parentElement.innerHTML='📷'")
+                  img(src='/images/realisations/regards-2026.jpg' alt='2026' onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
+                  .coming-soon-card(style='display:none')
+                    span.coming-soon-camera 📷
+                    .coming-soon-text
+                      span À venir
+                      span.dots
+                        span .
+                        span .
+                        span .
                 .vintage-card-footer
                   span 2026
-              .vintage-card-shine
-            .vintage-card
-              .vintage-card-inner
-                .vintage-photo-area
-                  img(src='/images/realisations/regards-2025.jpg' alt='2025' onerror="this.parentElement.innerHTML='📷'")
-                .vintage-card-footer
-                  span 2025
               .vintage-card-shine

@@ -131,7 +131,26 @@ export const es: Translation = {
         title: 'Recolección de ropa',
         subtitle: 'Dando una segunda vida a tu ropa.',
         description: 'La recolección de ropa de ISF ÉTS es un esfuerzo anual de solidaridad que permite recolectar cientos de prendas redistribuidas a organizaciones locales e internacionales. Simple, eficaz y directamente útil.',
-        partners: [], photos: [],
+        partners: [], 
+        photos: [],
+        video: '',
+        editions: [
+          {
+            year: '2025',
+            cover: '/images/realisations/collecte/2025/Image.jpg',
+            photos: [
+              '/images/realisations/collecte/2025/Image.jpg',
+              '/images/realisations/collecte/2025/Image-2.jpg',
+            ],
+          },
+          {
+            year: '2024',
+            cover: '/images/realisations/collecte/2024/Image (1).png',
+            photos: [
+              '/images/realisations/collecte/2024/Image (1).png',
+            ],
+          },
+        ],
       },
       autres: {
         label: 'Otros',

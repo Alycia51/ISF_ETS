@@ -56,7 +56,14 @@ export interface Translation {
     };
     carrieres: { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
     regards:   { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
-    collecte:  { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    collecte: {
+      label: string; title: string; subtitle: string;
+      description: string;
+      partners: { name: string; logo: string }[];
+      photos: string[];
+      video?: string;
+      editions?: { year: string; cover: string; photos: string[] }[];
+    };
     autres:    { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
   };
 };
