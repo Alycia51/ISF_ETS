@@ -25,7 +25,7 @@ export const es: Translation = {
     impactSubtitle: 'Resultados concretos, vidas transformadas',
     impactStats: [
       { number: '18+', label: 'Miembros activos' },
-      { number: '3', label: 'Proyectos realizados' },
+      { number: '10', label: 'Proyectos realizados' },
       { number: '3+', label: 'Communidades alcanzadas' },
       { number: '7', label: 'Años de compromiso' },
     ],
