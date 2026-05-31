@@ -184,7 +184,6 @@ export const en: Translation = {
       { name: 'Babitha Vythilingam',            role: 'Marketing Delegate',                     program: 'Software Engineering',                                                            photo: '',                 linkedin: 'https://www.linkedin.com/in/babitha-vythilingam-796052411/' },
       { name: 'Helden Massénat',                role: 'Partnerships & Events Delegate',         program: 'Construction Engineering',                                                        photo: 'helden.jpg' },
       { name: 'Prisca Hylarie Kabore',          role: 'Events Delegate',                        program: 'Master\'s in Renewable Energy & Energy Efficiency',                               photo: 'prisca.jpeg' },
-      { name: 'Moumi Ngamaleu-Mbesse',          role: 'Web Co-Director',                        program: 'Electrical Engineering',                                                          photo: '' },
     ],
     joinTitle: 'Become a Member',
     joinText: 'No prior experience required — only motivation and enthusiasm. All engineering programs are welcome!',

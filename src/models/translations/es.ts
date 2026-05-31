@@ -184,7 +184,6 @@ export const es: Translation = {
       { name: 'Babitha Vythilingam',            role: 'Delegada de marketing',                  program: 'Ingeniería de software',                                                           photo: '',                 linkedin: 'https://www.linkedin.com/in/babitha-vythilingam-796052411/' },
       { name: 'Helden Massénat',                role: 'Delegado de alianzas y eventos',         program: 'Ingeniería de la construcción',                                                    photo: 'helden.jpg' },
       { name: 'Prisca Hylarie Kabore',          role: 'Delegada de eventos',                    program: 'Maestría en energías renovables y eficiencia energética',                          photo: 'prisca.jpeg' },
-      { name: 'Moumi Ngamaleu-Mbesse',          role: 'Co-directora web',                       program: 'Ingeniería eléctrica',                                                             photo: '' },
     ],
     joinTitle: 'Convertirse en Miembro',
     joinText: 'No se requiere experiencia previa — solo motivación y entusiasmo. ¡Todos los programas de ingeniería son bienvenidos!',

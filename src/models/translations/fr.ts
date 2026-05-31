@@ -187,7 +187,6 @@ export const fr: Translation = {
       { name: 'Babitha Vythilingam',            role: 'Déléguée marketing',                     program: 'Génie logiciel',                                                                  photo: '',                 linkedin: 'https://www.linkedin.com/in/babitha-vythilingam-796052411/' },
       { name: 'Helden Massénat',                role: 'Délégué partenariat & événementiel',     program: 'Génie de la construction',                                                        photo: 'helden.jpg' },
       { name: 'Prisca Hylarie Kabore',          role: 'Déléguée événementiel',                  program: 'Maîtrise en énergies renouvelables & efficacité énergétique',                     photo: 'prisca.jpeg' },
-      { name: 'Moumi Ngamaleu-Mbesse',          role: 'Co-directrice web',                      program: 'Génie électrique',                                                                photo: '' },
     ],
     joinTitle: 'Devenir Membre',
     joinText: 'Aucune expérience préalable requise — seulement de la motivation et de l\'enthousiasme. Tous les programmes de génie sont les bienvenus!',
