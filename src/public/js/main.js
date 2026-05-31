@@ -303,6 +303,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Autres
+  const openAutres = document.getElementById('openAutres2026');
+  const autresBackdrop = document.getElementById('autresBackdrop');
+  const autresModal    = document.getElementById('autresModal');
+  const autresClose    = document.getElementById('autresClose');
+  if (openAutres && autresModal) {
+    openAutres.addEventListener('click', () => {
+      autresModal.classList.add('open');
+      autresBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    const closeAutres = () => {
+      autresModal.classList.remove('open');
+      autresBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    autresClose?.addEventListener('click', closeAutres);
+    autresBackdrop?.addEventListener('click', closeAutres);
+  }
+
   // Cartes vintage avec data-edition (collecte)
   document.querySelectorAll('.vintage-card[data-edition]').forEach(card => {
     const year = card.dataset.edition;
@@ -340,7 +360,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const section = thumb.dataset.section || 'default';
       const idx = parseInt(thumb.dataset.index || '0');
       if (!sections[section]) sections[section] = [];
-      sections[section][idx] = thumb.dataset.src;
+      sections[section][idx] = {
+        src: thumb.dataset.src,
+        caption: thumb.dataset.caption || '',
+      };
       thumb.addEventListener('click', () => openLightbox(section, idx));
     });
 
@@ -357,7 +380,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showLightboxItem() {
       const items = sections[curSection];
-      lightboxContent.innerHTML = `<img src="${items[curIdx]}" alt="">`;
+      const item = items[curIdx];
+      lightboxContent.innerHTML = `
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+          <img src="${item.src}" alt="${item.caption || ''}" style="max-width:90vw;max-height:75vh;border-radius:12px;object-fit:contain;">
+          ${item.caption ? `<p style="color:rgba(255,255,255,.8);font-size:14px;text-align:center;max-width:600px;line-height:1.5;">${item.caption}</p>` : ''}
+        </div>`;
       if (lightboxPrev) lightboxPrev.style.display = items.length > 1 ? 'flex' : 'none';
       if (lightboxNext) lightboxNext.style.display = items.length > 1 ? 'flex' : 'none';
     }

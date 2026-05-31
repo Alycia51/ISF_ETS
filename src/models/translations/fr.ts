@@ -157,9 +157,26 @@ export const fr: Translation = {
         label: 'Autres',
         title: 'Autres Activités',
         subtitle: 'Toutes nos autres initiatives et événements.',
-        description: 'ISF ÉTS organise tout au long de l\'année une variété d\'activités : soirées de recrutement, ateliers STIM, et plus encore. Chaque événement est une occasion de s\'impliquer, d\'apprendre et de créer des liens.',
+        description: 'Au fil des années, ISF ÉTS a organisé et participé à une variété d\'activités qui vont bien au-delà des projets techniques. Parmi nos initiatives récurrentes, la conférence xChange à l\'ÉTS et la retraite des sections du Québec rassemblent chaque année les membres ISF de la province. Nous avons aussi participé au Day on the Hill au Parlement d\'Ottawa en 2023, et organisé en 2019 une conférence à l\'ÉTS sur les Objectifs de Développement Durable. Chaque événement est une occasion de s\'impliquer, d\'apprendre et de créer des liens.',
         partners: [],
         photos: [],
+        video: '',
+        sections: [
+          {
+            title: '2023',
+            photos: [
+              { src: '/images/realisations/autres/ottawa-2023.png', caption: 'Day on the Hill — Parlement d\'Ottawa, 2023' },
+              { src: '/images/realisations/autres/xchange-2023.png', caption: 'Conférence xChange à l\'ÉTS, 2023' },
+            ],
+          },
+          {
+            title: '2019',
+            photos: [
+              { src: '/images/realisations/autres/conferenceDevDurable-2019.png', caption: 'Conférence sur les Objectifs de Développement Durable à l\'ÉTS, 2019' },
+              { src: '/images/realisations/autres/retraiteETS-2019.png', caption: 'Retraite des sections ISF du Québec à l\'ÉTS, 2019' },
+            ],
+          },
+        ],
       },
     },
   },

@@ -64,7 +64,14 @@ export interface Translation {
       video?: string;
       editions?: { year: string; cover: string; photos: string[] }[];
     };
-    autres:    { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    autres: {
+      label: string; title: string; subtitle: string;
+      description: string;
+      partners: { name: string; logo: string }[];
+      photos: string[];
+      video?: string;
+      sections?: { title: string; photos: { src: string; caption: string }[] }[];
+    };
   };
 };
   events: {

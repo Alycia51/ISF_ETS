@@ -14,12 +14,11 @@ block content
     .container
       .project-detail-layout
 
-        //- Gauche : description
+        //- Gauche : description + partenaires
         .project-desc
           h2.detail-section-title #{aboutLabel}
           p.typed-text(data-text=cat.description)
-
-          if cat.partners.length
+          if cat.partners && cat.partners.length
             .partners-section
               h3.partners-title #{partnersLabel}
               .partners-grid
@@ -31,13 +30,13 @@ block content
                       .partner-logo-placeholder 🤝
                     span.partner-name #{partner.name}
 
-        //- Droite : cartes photo vintage par année décroissant
+        //- Droite : carte vintage 2026
         .project-photos
           .vintage-cards-row
-            .vintage-card
+            .vintage-card(id='openAutres2026' style='cursor:pointer')
               .vintage-card-inner
                 .vintage-photo-area
-                  img(src='/images/realisations/autres-2026.jpg' alt='2026' onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
+                  img(src='/images/realisations/autres/ottawa-2023.png' alt='Autres' onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
                   .coming-soon-card(style='display:none')
                     span.coming-soon-camera 📷
                     .coming-soon-text
@@ -47,5 +46,30 @@ block content
                         span .
                         span .
                 .vintage-card-footer
-                  span 2026
+                  span 2019-2023
               .vintage-card-shine
+
+  //- Shadowbox
+  .album-backdrop(id='autresBackdrop')
+  .album-modal(id='autresModal')
+    button.album-close(id='autresClose' type='button') ✕
+
+    each section, si in cat.sections || []
+      .album-section
+        h3.album-section-title 📸 #{section.title}
+        .album-grid
+          each photo, i in section.photos
+            .album-thumb(
+              data-src=photo.src
+              data-caption=photo.caption
+              data-section=`autres-${si}`
+              data-index=i
+            )
+              img(src=photo.src alt=photo.caption)
+
+  //- Lightbox
+  .lightbox(id='lightbox')
+    button.lightbox-close(id='lightboxClose') ✕
+    button.lightbox-prev(id='lightboxPrev') ‹
+    button.lightbox-next(id='lightboxNext') ›
+    .lightbox-content(id='lightboxContent')

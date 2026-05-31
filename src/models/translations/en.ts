@@ -156,8 +156,26 @@ export const en: Translation = {
         label: 'Other',
         title: 'Other Activities',
         subtitle: 'All our other initiatives and events.',
-        description: 'ISF ÉTS organizes a variety of activities throughout the year: recruitment evenings, STEM workshops, and more. Each event is an opportunity to get involved, learn and build connections.',
-        partners: [], photos: [],
+        description: 'Over the years, ISF ÉTS has organized and participated in a variety of activities that go well beyond technical projects. Among our recurring initiatives, the xChange conference at ÉTS and the Quebec sections retreat bring together ISF members from across the province every year. We also participated in the Day on the Hill at the Parliament of Ottawa in 2023, and organized a conference at ÉTS in 2019 on the Sustainable Development Goals. Each event is an opportunity to get involved, learn and build connections.',
+        partners: [], 
+        photos: [],
+        video: '',
+        sections: [
+          {
+            title: '2023',
+            photos: [
+              { src: '/images/realisations/autres/ottawa-2023.png', caption: 'Day on the Hill — Parliament of Ottawa, 2023' },
+              { src: '/images/realisations/autres/xchange-2023.png', caption: 'xChange Conference at ÉTS, 2023' },
+            ],
+          },
+          {
+            title: '2019',
+            photos: [
+              { src: '/images/realisations/autres/conferenceDevDurable-2019.png', caption: 'Conference on Sustainable Development Goals at ÉTS, 2019' },
+              { src: '/images/realisations/autres/retraiteETS-2019.png', caption: 'ISF Quebec Sections Retreat at ÉTS, 2019' },
+            ],
+          },
+        ],
       },
     },
   },
