@@ -3,6 +3,8 @@ extends ../../layouts/base
 block content
   - var aboutLabel    = locale === 'en' ? 'About' : locale === 'es' ? 'Acerca de' : 'À propos'
   - var partnersLabel = locale === 'en' ? 'Our partners' : locale === 'es' ? 'Nuestros socios' : 'Merci à nos partenaires'
+  - var galaLabel     = locale === 'en' ? 'Gala' : locale === 'es' ? 'Gala' : 'Gala'
+  - var confLabel     = locale === 'en' ? 'Afro-Excellence Conference' : locale === 'es' ? 'Conferencia Afro-Excelencia' : 'Conférence Afro-Excellence'
   - var cat = t.projects.categories.histoire
 
   header.page-header
@@ -14,12 +16,10 @@ block content
     .container
       .project-detail-layout
 
-        //- Gauche : description
         .project-desc
           h2.detail-section-title #{aboutLabel}
           p.typed-text(data-text=cat.description)
-
-          if cat.partners.length
+          if cat.partners && cat.partners.length
             .partners-section
               h3.partners-title #{partnersLabel}
               .partners-grid
@@ -31,20 +31,46 @@ block content
                       .partner-logo-placeholder 🤝
                     span.partner-name #{partner.name}
 
-        //- Droite : cartes photo vintage par année décroissant
         .project-photos
           .vintage-cards-row
-            .vintage-card
+            //- Carte cliquable qui ouvre la shadowbox
+            .vintage-card(id='openAlbum2026' style='cursor:pointer')
               .vintage-card-inner
                 .vintage-photo-area
-                  img(src='/images/realisations/histoire-2026.jpg' alt='2026' onerror="this.parentElement.innerHTML='📷'")
+                  img(src='/images/realisations/histoire/Gala/DSC05435.jpg' alt='2026' onerror="this.parentElement.innerHTML='📷'")
                 .vintage-card-footer
                   span 2026
               .vintage-card-shine
-            .vintage-card
-              .vintage-card-inner
-                .vintage-photo-area
-                  img(src='/images/realisations/histoire-2025.jpg' alt='2025' onerror="this.parentElement.innerHTML='📷'")
-                .vintage-card-footer
-                  span 2025
-              .vintage-card-shine
+
+  //- ── SHADOWBOX ALBUM ──────────────────────────────────────
+  .album-backdrop(id='albumBackdrop')
+  .album-modal(id='albumModal')
+    button.album-close(id='albumClose' type='button') ✕
+
+    //- Vidéo
+    .album-video-wrap
+      video.album-video(controls)
+        source(src=cat.video type='video/mp4')
+
+    //- Section Gala
+    .album-section
+      h3.album-section-title #{galaLabel}
+      .album-grid
+        each photo, i in cat.gala || []
+          .album-thumb(data-src=photo data-section='gala' data-index=i)
+            img(src=photo alt='Gala 2026')
+
+    //- Section Conférence
+    .album-section
+      h3.album-section-title #{confLabel}
+      .album-grid
+        each photo, i in cat.conference || []
+          .album-thumb(data-src=photo data-section='conference' data-index=i)
+            img(src=photo alt='Conférence 2026')
+
+  //- Lightbox photo
+  .lightbox(id='lightbox')
+    button.lightbox-close(id='lightboxClose') ✕
+    button.lightbox-prev(id='lightboxPrev') ‹
+    button.lightbox-next(id='lightboxNext') ›
+    .lightbox-content(id='lightboxContent')

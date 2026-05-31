@@ -579,6 +579,18 @@ h1, h2, h3, h4 { font-family: var(--font-body); font-weight: 500; letter-spacing
 .member-card h3 { font-family: var(--font-body); font-size: 17px; font-weight: 600; margin-bottom: 5px; }
 .member-role { font-size: 14px; font-weight: 600; color: var(--red); margin-bottom: 4px; }
 .member-program { font-size: 13px; color: var(--gray-400); }
+.member-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  color: #0077b5;
+  transition: color var(--transition), transform var(--transition);
+}
+.member-linkedin:hover {
+  color: #005885;
+  transform: translateY(-2px);
+}
 
 /* ── CONTACT ── */
 .contact-section { padding: 80px 0 100px; background: var(--cream); }
@@ -921,6 +933,101 @@ h1, h2, h3, h4 { font-family: var(--font-body); font-weight: 500; letter-spacing
   font-size: 56px; color: var(--gray-400);
   border: 2px dashed rgba(0,0,0,.1);
 }
+
+/* ── ALBUM SHADOWBOX ── */
+.album-backdrop {
+  display: none; position: fixed; inset: 0; z-index: 3000;
+  background: rgba(0,0,0,.7); backdrop-filter: blur(6px);
+}
+.album-backdrop.open { display: block; }
+
+.album-modal {
+  display: none; position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(860px, 94vw);
+  max-height: 88vh;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 40px 100px rgba(0,0,0,.45);
+  z-index: 3001;
+  overflow-y: auto;
+  padding: 32px 28px 40px;
+  animation: cardPop .35s cubic-bezier(.34,1.56,.64,1);
+}
+.album-modal.open { display: block; }
+
+.album-close {
+  position: absolute; top: 14px; right: 16px;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(0,0,0,.12); border: none;
+  cursor: pointer; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition);
+}
+.album-close:hover { background: var(--red); color: var(--white); }
+
+.album-video-wrap {
+  width: 100%; margin-bottom: 32px;
+  border-radius: var(--radius-md); overflow: hidden;
+  background: var(--black);
+}
+.album-video {
+  width: 100%; display: block;
+  max-height: 360px; object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.album-section { margin-bottom: 32px; }
+.album-section-title {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 700;
+  margin-bottom: 14px; color: var(--black);
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+.album-thumb {
+  aspect-ratio: 1; overflow: hidden;
+  border-radius: var(--radius-sm); cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.album-thumb:hover { transform: scale(1.04); box-shadow: var(--shadow-md); }
+.album-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── LIGHTBOX PHOTO ── */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 4000;
+  background: rgba(0,0,0,.93);
+  align-items: center; justify-content: center;
+  backdrop-filter: blur(8px);
+}
+.lightbox.open { display: flex; }
+.lightbox-content { max-width: 90vw; max-height: 88vh; display: flex; align-items: center; justify-content: center; }
+.lightbox-content img { max-width: 90vw; max-height: 88vh; border-radius: var(--radius-md); object-fit: contain; }
+.lightbox-close {
+  position: absolute; top: 20px; right: 24px;
+  background: rgba(255,255,255,.12); border: none;
+  color: var(--white); font-size: 22px; cursor: pointer;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition);
+}
+.lightbox-close:hover { background: var(--red); }
+.lightbox-prev, .lightbox-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.12); border: none;
+  color: var(--white); font-size: 34px; cursor: pointer;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition);
+}
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox-prev:hover, .lightbox-next:hover { background: var(--red); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {

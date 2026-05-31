@@ -279,4 +279,96 @@ document.addEventListener('DOMContentLoaded', () => {
     typeObs.observe(typedEl);
   }
 
+  // ── Album shadowbox ──
+  const openAlbum = document.getElementById('openAlbum2026');
+  const albumBackdrop = document.getElementById('albumBackdrop');
+  const albumModal = document.getElementById('albumModal');
+  const albumClose = document.getElementById('albumClose');
+
+  if (openAlbum && albumModal) {
+    openAlbum.addEventListener('click', () => {
+      albumModal.classList.add('open');
+      albumBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    const closeAlbum = () => {
+      albumModal.classList.remove('open');
+      albumBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+      // Pause la vidéo
+      const vid = albumModal.querySelector('video');
+      if (vid) vid.pause();
+    };
+    albumClose?.addEventListener('click', closeAlbum);
+    albumBackdrop?.addEventListener('click', closeAlbum);
+  }
+
+  // ── Lightbox photos (dans l'album) ──
+  const lightbox = document.getElementById('lightbox');
+  const lightboxContent = document.getElementById('lightboxContent');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+
+  if (lightbox && lightboxContent) {
+    const sections = {};
+
+    document.querySelectorAll('.album-thumb').forEach(thumb => {
+      const section = thumb.dataset.section || 'default';
+      const idx = parseInt(thumb.dataset.index || '0');
+      if (!sections[section]) sections[section] = [];
+      sections[section][idx] = thumb.dataset.src;
+
+      thumb.addEventListener('click', () => openLightbox(section, idx));
+    });
+
+    let curSection = 'default';
+    let curIdx = 0;
+
+    function openLightbox(section, idx) {
+      curSection = section;
+      curIdx = idx;
+      showLightboxItem();
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showLightboxItem() {
+      const items = sections[curSection];
+      lightboxContent.innerHTML = `<img src="${items[curIdx]}" alt="">`;
+      if (lightboxPrev) lightboxPrev.style.display = items.length > 1 ? 'flex' : 'none';
+      if (lightboxNext) lightboxNext.style.display = items.length > 1 ? 'flex' : 'none';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxContent.innerHTML = '';
+      document.body.style.overflow = 'hidden'; // garde l'album ouvert
+    }
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    lightboxPrev?.addEventListener('click', e => {
+      e.stopPropagation();
+      const items = sections[curSection];
+      curIdx = (curIdx - 1 + items.length) % items.length;
+      showLightboxItem();
+    });
+    lightboxNext?.addEventListener('click', e => {
+      e.stopPropagation();
+      const items = sections[curSection];
+      curIdx = (curIdx + 1) % items.length;
+      showLightboxItem();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (lightbox.classList.contains('open')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') { const items = sections[curSection]; curIdx = (curIdx - 1 + items.length) % items.length; showLightboxItem(); }
+        if (e.key === 'ArrowRight') { const items = sections[curSection]; curIdx = (curIdx + 1) % items.length; showLightboxItem(); }
+      }
+    });
+  }
+
 });

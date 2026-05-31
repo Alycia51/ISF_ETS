@@ -45,7 +45,15 @@ export interface Translation {
   title: string;
   subtitle: string;
   categories: {
-    histoire:  { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    histoire: { 
+      label: string; title: string; subtitle: string; 
+      description: string; 
+      partners: { name: string; logo: string }[];
+      photos: string[];
+      video?: string;
+      gala?: string[];
+      conference?: string[];
+    };
     carrieres: { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
     regards:   { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
     collecte:  { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
@@ -62,7 +70,7 @@ export interface Translation {
     title: string;
     subtitle: string;
     boardTitle: string;
-    board: { name: string; role: string; program: string }[];
+    board: { name: string; role: string; program: string; photo?: string; linkedin?: string }[];
     joinTitle: string;
     joinText: string;
     joinBtn: string;
