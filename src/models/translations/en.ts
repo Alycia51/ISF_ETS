@@ -194,7 +194,7 @@ export const en: Translation = {
       //{ date: 'WIN', month: '2027', title: 'International Project', location: 'Benin, Togo or Haiti', description: 'International humanitarian engineering mission. Selected members put their skills at the service of a community in West Africa or Haiti.', type: 'Field Mission' },
       { date: 'SUM', month: '2027', title: 'Block Party', location: 'ÉTS Campus, Montreal', description: 'Year-end celebration to mark the achievements of the ISF ÉTS 2026-2027 team and gear up for the next season.', type: 'Event' },
       //{ date: 'SUM', month: '2027', title: 'International Project', location: 'Benin, Togo or Haiti', description: 'Second phase of the international humanitarian engineering mission. On-the-ground deployment in a partner community.', type: 'Field Mission' },
-      { date: 'SUM', month: '2027', title: 'Festival Flavors Without Borders', location: 'ÉTS Campus, Montreal', description: 'Gastronomic and cultural festival open to the entire ÉTS student community. Discover flavors, traditions and cultures from around the world through food, artistic performances and exchanges between students of all backgrounds.', type: 'Festival' },
+      { date: 'SUM', month: '2027', title: 'Festival Flavors Without Borders', location: 'ÉTS Campus, Montreal', description: 'More details to come...'/*'Gastronomic and cultural festival open to the entire ÉTS student community. Discover flavors, traditions and cultures from around the world through food, artistic performances and exchanges between students of all backgrounds.'*/, type: 'Festival' },
     ],
     pastTitle: 'Past Events',
   },
