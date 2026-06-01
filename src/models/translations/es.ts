@@ -194,7 +194,7 @@ export const es: Translation = {
       //{ date: 'INV', month: '2027', title: 'Proyecto Internacional', location: 'Benín, Togo o Haití', description: 'Misión internacional de ingeniería humanitaria. Los miembros seleccionados ponen sus habilidades al servicio de una comunidad en África Occidental o Haití.', type: 'Misión de Campo' },
       { date: 'VER', month: '2027', title: 'Block Party', location: 'Campus ÉTS, Montreal', description: 'Gran fiesta de fin de año para celebrar juntos los logros del equipo ISF ÉTS 2026-2027 y prepararse para la próxima temporada.', type: 'Evento' },
       //{ date: 'VER', month: '2027', title: 'Proyecto Internacional', location: 'Benín, Togo o Haití', description: 'Segunda fase de la misión internacional de ingeniería humanitaria. Despliegue sobre el terreno en una comunidad socia.', type: 'Misión de Campo' },
-      { date: 'VER', month: '2027', title: 'Festival Sabores Sin Fronteras', location: 'Campus ÉTS, Montreal', description: 'Más detalles próximamente...'/*'Festival gastronómico y cultural abierto a toda la comunidad estudiantil de la ÉTS. Descubre sabores, tradiciones y culturas de todo el mundo a través de la comida, las actuaciones artísticas y los encuentros entre estudiantes de todos los horizontes.'*/, type: 'Festival' },
+      //{ date: 'VER', month: '2027', title: 'Festival Sabores Sin Fronteras', location: 'Campus ÉTS, Montreal', description: 'Más detalles próximamente...'/*'Festival gastronómico y cultural abierto a toda la comunidad estudiantil de la ÉTS. Descubre sabores, tradiciones y culturas de todo el mundo a través de la comida, las actuaciones artísticas y los encuentros entre estudiantes de todos los horizontes.'*/, type: 'Festival' },
     ],
     pastTitle: 'Eventos Pasados',
   },
