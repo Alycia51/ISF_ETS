@@ -26,7 +26,7 @@ block content
                 each partner in cat.partners
                   .partner-card
                     if partner.logo
-                      img(src=partner.logo alt=partner.name)
+                      img(src=partner.logo alt=partner.name loading='lazy')
                     else
                       .partner-logo-placeholder 🤝
                     span.partner-name #{partner.name}
@@ -37,7 +37,7 @@ block content
             .vintage-card(id='openAlbum2026' style='cursor:pointer')
               .vintage-card-inner
                 .vintage-photo-area
-                  img(src='/images/realisations/histoire/Gala/DSC05435.jpg' alt='2026' onerror="this.parentElement.innerHTML='📷'")
+                  img(src='/images/realisations/histoire/Gala/DSC05435.jpg' alt='2026' loading='lazy' onerror="this.parentElement.innerHTML='📷'")
                 .vintage-card-footer
                   span 2026
               .vintage-card-shine
@@ -58,7 +58,7 @@ block content
       .album-grid
         each photo, i in cat.gala || []
           .album-thumb(data-src=photo data-section='gala' data-index=i)
-            img(src=photo alt='Gala 2026')
+            img(src=photo alt='Gala 2026' loading='lazy')
 
     //- Section Conférence
     .album-section
@@ -66,7 +66,7 @@ block content
       .album-grid
         each photo, i in cat.conference || []
           .album-thumb(data-src=photo data-section='conference' data-index=i)
-            img(src=photo alt='Conférence 2026')
+            img(src=photo alt='Conférence 2026' loading='lazy')
 
   //- Lightbox photo
   .lightbox(id='lightbox')

@@ -36,7 +36,7 @@ block content
             .vintage-card(id='openAutres2026' style='cursor:pointer')
               .vintage-card-inner
                 .vintage-photo-area
-                  img(src='/images/realisations/autres/ottawa-2023.png' alt='Autres' onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
+                  img(src='/images/realisations/autres/ottawa-2023.png' alt='Autres' loading='lazy' onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
                   .coming-soon-card(style='display:none')
                     span.coming-soon-camera 📷
                     .coming-soon-text
@@ -65,7 +65,7 @@ block content
               data-section=`autres-${si}`
               data-index=i
             )
-              img(src=photo.src alt=photo.caption)
+              img(src=photo.src alt=photo.caption loading='lazy')
 
   //- Lightbox
   .lightbox(id='lightbox')

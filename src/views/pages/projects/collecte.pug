@@ -25,7 +25,7 @@ block content
                 each partner in cat.partners
                   .partner-card
                     if partner.logo
-                      img(src=partner.logo alt=partner.name)
+                      img(src=partner.logo alt=partner.name loading='lazy')
                     else
                       .partner-logo-placeholder 🤝
                     span.partner-name #{partner.name}
@@ -37,7 +37,7 @@ block content
               .vintage-card(data-edition=edition.year style='cursor:pointer')
                 .vintage-card-inner
                   .vintage-photo-area
-                    img(src=edition.cover alt=edition.year onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
+                    img(src=edition.cover alt=edition.year loading='lazy' onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'")
                     .coming-soon-card(style='display:none')
                       span.coming-soon-camera 📷
                       .coming-soon-text
@@ -60,7 +60,7 @@ block content
         .album-grid
           each photo, i in edition.photos
             .album-thumb(data-src=photo data-section=`collecte-${edition.year}` data-index=i)
-              img(src=photo alt=`Collecte ${edition.year}`)
+              img(src=photo alt=`Collecte ${edition.year}` loading='lazy')
 
   //- Lightbox
   .lightbox(id='lightbox')
