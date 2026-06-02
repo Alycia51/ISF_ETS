@@ -219,7 +219,7 @@ export const en: Translation = {
       { name: 'Hassanatou Baldé',               role: 'Engineering Delegate',                   program: 'Construction Engineering',                                                        photo: 'hassanatou.jpg',   linkedin: 'https://www.linkedin.com/in/hassanatou-balde-7b2980205/' },
       { name: 'Thierry Noutcha Noutcha',        role: 'Events Delegate',                        program: 'DESS in Innovation Management',                                                   photo: 'thierry.jpeg',     linkedin: 'https://www.linkedin.com/in/thierrynoutcha/' },
       { name: 'Babitha Vythilingam',            role: 'Marketing Delegate',                     program: 'Software Engineering',                                                            photo: '',                 linkedin: 'https://www.linkedin.com/in/babitha-vythilingam-796052411/' },
-      { name: 'Helden Massénat',                role: 'Partnerships & Events Delegate',         program: 'Construction Engineering',                                                        photo: 'helden.jpg' },
+      { name: 'Helden Massénat',                role: 'Partnerships & Events Delegate',         program: 'Construction Engineering',                                                        photo: 'helden.jpg',       linkedin: 'https://www.linkedin.com/in/helden-mass%C3%A9nat-18aa6629a/'},
       { name: 'Prisca Hylarie Kabore',          role: 'Events Delegate',                        program: 'Master\'s in Renewable Energy & Energy Efficiency',                               photo: 'prisca.jpeg' },
     ],
     joinTitle: 'Become a Member',

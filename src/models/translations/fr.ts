@@ -220,7 +220,7 @@ export const fr: Translation = {
       { name: 'Hassanatou Baldé',               role: 'Déléguée ingénierie',                    program: 'Génie de la construction',                                                        photo: 'hassanatou.jpg',   linkedin: 'https://www.linkedin.com/in/hassanatou-balde-7b2980205/' },
       { name: 'Thierry Noutcha Noutcha',        role: 'Délégué événementiel',                   program: 'DESS en gestion de l\'innovation',                                                photo: 'thierry.jpeg',     linkedin: 'https://www.linkedin.com/in/thierrynoutcha/' },
       { name: 'Babitha Vythilingam',            role: 'Déléguée marketing',                     program: 'Génie logiciel',                                                                  photo: '',                 linkedin: 'https://www.linkedin.com/in/babitha-vythilingam-796052411/' },
-      { name: 'Helden Massénat',                role: 'Délégué partenariat & événementiel',     program: 'Génie de la construction',                                                        photo: 'helden.jpg' },
+      { name: 'Helden Massénat',                role: 'Délégué partenariat & événementiel',     program: 'Génie de la construction',                                                        photo: 'helden.jpg',       linkedin: 'https://www.linkedin.com/in/helden-mass%C3%A9nat-18aa6629a/'},
       { name: 'Prisca Hylarie Kabore',          role: 'Déléguée événementiel',                  program: 'Maîtrise en énergies renouvelables & efficacité énergétique',                     photo: 'prisca.jpeg' },
     ],
     joinTitle: 'Devenir Membre',
