@@ -222,7 +222,7 @@ export const en: Translation = {
       { name: 'Helden Massénat',                role: 'Partnerships & Events Delegate',         program: 'Construction Engineering',                                                        photo: 'helden.jpg',       linkedin: 'https://www.linkedin.com/in/helden-mass%C3%A9nat-18aa6629a/'},
       { name: 'Prisca Hylarie Kabore',          role: 'Events Delegate',                        program: 'Master\'s in Renewable Energy & Energy Efficiency',                               photo: 'prisca.jpeg' },
       { name: 'Hind Elibrami',                  role: 'VP Design',                              program: 'Bachelor\'s in User Experience (UX) Design',                                      photo: '',                 linkedin: 'https://www.linkedin.com/in/hind-elibrami-925747277/' },
-      { name: 'Jonathan Van Hanja',             role: '',                                       program: 'PhD in Urban Hydrogeology',                                                       photo: 'jonathanVH.jpg',   linkedin: 'https://www.linkedin.com/in/jonathan-van-hanja-ab7211214/?skipRedirect=true' },
+      { name: 'Jonathan Van Hanja',             role: 'Engineering Delegate',                   program: 'PhD in Urban Hydrogeology',                                                       photo: 'jonathanVH.jpg',   linkedin: 'https://www.linkedin.com/in/jonathan-van-hanja-ab7211214/?skipRedirect=true' },
     ],
     joinTitle: 'Become a Member',
     joinText: 'No prior experience required — only motivation and enthusiasm. All engineering programs are welcome!',

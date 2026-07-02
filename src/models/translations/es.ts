@@ -222,7 +222,7 @@ export const es: Translation = {
       { name: 'Helden Massénat',                role: 'Delegado de alianzas y eventos',         program: 'Ingeniería de la construcción',                                                    photo: 'helden.jpg',       linkedin: 'https://www.linkedin.com/in/helden-mass%C3%A9nat-18aa6629a/' },
       { name: 'Prisca Hylarie Kabore',          role: 'Delegada de eventos',                    program: 'Maestría en energías renovables y eficiencia energética',                          photo: 'prisca.jpeg' },
       { name: 'Hind Elibrami',                  role: 'VP Diseño',                              program: 'Licenciatura en diseño de experiencia de usuario (UX)',                            photo: '',                 linkedin: 'https://www.linkedin.com/in/hind-elibrami-925747277/' },
-      { name: 'Jonathan Van Hanja',             role: '',                                       program: 'Doctorado en hidrogeología urbana',                                                photo: 'jonathanVH.jpg',   linkedin: 'https://www.linkedin.com/in/jonathan-van-hanja-ab7211214/?skipRedirect=true' },
+      { name: 'Jonathan Van Hanja',             role: 'Delegado de ingeniería',                 program: 'Doctorado en hidrogeología urbana',                                                photo: 'jonathanVH.jpg',   linkedin: 'https://www.linkedin.com/in/jonathan-van-hanja-ab7211214/?skipRedirect=true' },
     ],
     joinTitle: 'Convertirse en Miembro',
     joinText: 'No se requiere experiencia previa — solo motivación y entusiasmo. ¡Todos los programas de ingeniería son bienvenidos!',
