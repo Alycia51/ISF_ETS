@@ -223,7 +223,7 @@ export const fr: Translation = {
       { name: 'Helden Massénat',                role: 'Délégué partenariat & événementiel',     program: 'Génie de la construction',                                                        photo: 'helden.jpg',       linkedin: 'https://www.linkedin.com/in/helden-mass%C3%A9nat-18aa6629a/'},
       { name: 'Prisca Hylarie Kabore',          role: 'Déléguée événementiel',                  program: 'Maîtrise en énergies renouvelables & efficacité énergétique',                     photo: 'prisca.jpeg' },
       { name: 'Hind Elibrami',                  role: 'VP Design',                              program: 'Baccalauréat en design d\'expérience utilisateur (UX) ',                          photo: '',                 linkedin: 'https://www.linkedin.com/in/hind-elibrami-925747277/' },  
-      { name: 'Jonathan Van Hanja',             role: 'Délégué design',                         program: 'Doctorat en hydrogéologie urbaine',                                               photo: 'jonathanVH.jpg',   linkedin: 'https://www.linkedin.com/in/jonathan-van-hanja-ab7211214/?skipRedirect=true' },
+      { name: 'Jonathan Van Hanja',             role: '',                                       program: 'Doctorat en hydrogéologie urbaine',                                               photo: 'jonathanVH.jpg',   linkedin: 'https://www.linkedin.com/in/jonathan-van-hanja-ab7211214/?skipRedirect=true' },
     ],
     joinTitle: 'Devenir Membre',
     joinText: 'Aucune expérience préalable requise — seulement de la motivation et de l\'enthousiasme. Tous les programmes de génie sont les bienvenus!',
