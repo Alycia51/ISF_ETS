@@ -24,7 +24,7 @@ export const fr: Translation = {
     impactTitle: 'Notre Impact en Chiffres',
     impactSubtitle: 'Des résultats concrets, des vies transformées',
     impactStats: [
-      { number: '18+', label: 'Membres actifs' },
+      { number: '22+', label: 'Membres actifs' },
       { number: '10', label: 'Projets réalisés' },
       { number: '3+', label: 'Communautés touchées' },
       { number: '7', label: 'Années d\'engagement' },

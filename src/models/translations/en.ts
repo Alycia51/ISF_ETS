@@ -24,7 +24,7 @@ export const en: Translation = {
     impactTitle: 'Our Impact in Numbers',
     impactSubtitle: 'Concrete results, transformed lives',
     impactStats: [
-      { number: '18+', label: 'Active members' },
+      { number: '22+', label: 'Active members' },
       { number: '10', label: 'Completed projects' },
       { number: '3+', label: 'Countries reached' },
       { number: '7', label: 'Years of engagement' },
