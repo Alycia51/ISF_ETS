@@ -341,7 +341,7 @@ export const fr: Translation = {
         longDescription: 'Une soirée historique qui a réuni trois pionnières noires au Canada : la sénatrice Suze Youance, ing., Ph.D., ASC-C.Dir., Tracy Paulotte et Marsha Bazile, M. Adm. Animé par Fabrice Horace, cet échange porteur a exploré les intersections entre la politique, l\'art et la technologie au service du progrès et de l\'excellence noire. Une conversation inspirante sur la persévérance, le leadership et l\'impact que chacun peut avoir dans sa communauté.',
         members: ['Fabrice Horace'],
         url: 'https://youtu.be/2jTzoMuX5Ns?si=o3CbrEdoYtjcNXdT',
-        thumbnail: 'https://img.youtube.com/vi/2jTzoMuX5Ns/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/2jTzoMuX5Ns/maxresdefault.jpg',
       },
       {
         title: 'Podcast #11 ISF ÉTS — Philippe Terrier',
@@ -350,7 +350,7 @@ export const fr: Translation = {
         longDescription: 'Il approfondit particulièrement la notion de low tech, qu’il présente moins comme un ensemble de technologies que comme une manière d’habiter le monde. La low tech constitue en effet une démarche critique qui invite à repenser notre relation aux outils technologiques. Elle tient compte des effets indésirables du numérique, notamment l’effet rebond ainsi que l’accumulation de « technologies zombies », c’est-à-dire ces appareils devenus inutilisés qui s’entassent dans nos tiroirs, comme les anciens téléphones cellulaires. À l’instar de la philosophie de la décroissance économique, la low tech valorise un usage plus sobre, réfléchi et responsable des technologies, en accordant une attention particulière à la gestion des ressources tout au long du cycle de vie des objets, depuis l’extraction des matières premières jusqu’à leur recyclage.',
         members: ['Jonathan Mahan', 'Clara St-Leger'],
         url: 'https://youtu.be/uA5JLo37ryQ?si=MaxzE9zEtf9deYUi',
-        thumbnail: 'https://img.youtube.com/vi/uA5JLo37ryQ/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/uA5JLo37ryQ/mqdefault.jpg',
       },
       {
         title: 'ISF ING 3.0 #3 - Zineb El Alami',
@@ -359,7 +359,7 @@ export const fr: Translation = {
         longDescription: 'Passionnée par le développement du potentiel humain, elle accompagne les étudiants dans leur transition vers le marché du travail en les aidant à mieux se connaître, à développer leur employabilité et à réussir leur expérience de stage. Son approche allie connaissance de soi, développement professionnel et accompagnement humain afin de favoriser la réussite et l\'épanouissement de chaque étudiant.',
         members: ['Eliott Baltz', ''],
         url: 'https://youtu.be/H5mgGEi1y3o?si=AmNPk6SAN-d1sQnz',
-        thumbnail: 'https://img.youtube.com/vi/H5mgGEi1y3o/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/H5mgGEi1y3o/maxresdefault.jpg',
       },
     ],
   },

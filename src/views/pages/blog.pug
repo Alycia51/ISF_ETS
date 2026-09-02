@@ -18,7 +18,7 @@ block content
               .card-thumb-link(data-url=podcast.url)
                 .card-thumbnail
                   if podcast.thumbnail
-                    img(src=podcast.thumbnail alt=podcast.title)
+                    img(src=podcast.thumbnail alt=podcast.title loading='lazy' onerror="this.style.display='none'")
                   else
                     .card-thumb-placeholder 🎙️
               .card-body
