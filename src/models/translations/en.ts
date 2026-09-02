@@ -183,7 +183,6 @@ export const en: Translation = {
     title: '2026–2027 Calendar',
     subtitle: 'Discover all our planned activities for the year. Join us and get involved!',
     upcoming: [
-      { date: '18', month: 'JULY', title: 'Block Party ISF & PRECI', location: 'ÉTS Campus, Montreal', description: 'Year-opening celebration in collaboration with PRECI. The perfect opportunity to meet ISF members, connect, and kick off the 2026-2027 season.', type: 'Event' },
       { date: 'FAL', month: '2026', title: 'Food & Clothing Drive', location: 'ÉTS Campus, Montreal', description: 'Solidarity drive collecting food and clothing for local community organizations. Every donation counts!', type: 'Drive' },
       { date: 'FAL', month: '2026', title: 'ÉTS Open House', location: 'Pavilion A Hall, ÉTS', description: 'Open house day at École de technologie supérieure. ISF ÉTS holds a booth in the Pavilion A hall to introduce our club to prospective and new students curious about student life in engineering.', type: 'Open House' },
       { date: 'FAL', month: '2026', title: 'Careers Without Borders', location: 'ÉTS Campus, Montreal', description: 'Annual event connecting engineering students with professionals from diverse backgrounds and cultures, showing that success is achievable regardless of origin. Workshops, conferences and networking. We also welcome high school students to discover the engineering profession and student life.', type: 'Event' },
