@@ -339,7 +339,7 @@ export const en: Translation = {
         longDescription: 'A historic evening bringing together three Black pioneers in Canada: Senator Suze Youance, ing., Ph.D., ASC-C.Dir., Tracy Paulotte and Marsha Bazile, M. Adm. Hosted by Fabrice Horace, this meaningful exchange explored the intersections between politics, art and technology in service of progress and Black excellence. An inspiring conversation about perseverance, leadership and the impact each of us can have in our community.',
         members: ['Fabrice Horace'],
         url: 'https://youtu.be/2jTzoMuX5Ns?si=o3CbrEdoYtjcNXdT',
-        thumbnail: 'https://img.youtube.com/vi/o3CbrEdoYtjcNXdT/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/2jTzoMuX5Ns/hqdefault.jpg',
       },
       {
         title: 'Podcast #11 ISF ÉTS — Philippe Terrier',
@@ -348,7 +348,7 @@ export const en: Translation = {
         longDescription: 'He explores in depth the notion of low tech, presenting it less as a set of technologies than as a way of inhabiting the world. Low tech is a critical approach that invites us to rethink our relationship with technological tools. It takes into account the undesirable effects of digital technology, including the rebound effect and the accumulation of "zombie technologies" — unused devices piling up in our drawers, like old cell phones. Like the philosophy of economic degrowth, low tech promotes a more sober, thoughtful and responsible use of technologies, paying particular attention to resource management throughout the life cycle of objects, from raw material extraction to recycling.',
         members: ['Jonathan Mahan', 'Clara St-Leger'],
         url: 'https://youtu.be/uA5JLo37ryQ?si=MaxzE9zEtf9deYUi',
-        thumbnail: 'https://img.youtube.com/vi/MaxzE9zEtf9deYUi/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/uA5JLo37ryQ/hqdefault.jpg',
       },
       {
         title: 'ISF ING 3.0 #3 - Zineb El Alami',
@@ -357,7 +357,7 @@ export const en: Translation = {
         longDescription: 'Passionate about developing human potential, she supports students in their transition to the job market by helping them better know themselves, develop their employability and succeed in their internship experience. Her approach combines self-knowledge, professional development and human support to foster the success and fulfillment of each student.',
         members: ['Eliott Baltz', ''],
         url: 'https://youtu.be/H5mgGEi1y3o?si=AmNPk6SAN-d1sQnz',
-        thumbnail: 'https://img.youtube.com/vi/AmNPk6SAN-d1sQnz/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/H5mgGEi1y3o/hqdefault.jpg',
       },
     ],
   },
