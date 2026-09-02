@@ -339,7 +339,7 @@ export const es: Translation = {
         longDescription: 'Una velada histórica que reunió a tres pioneras negras en Canadá: la senadora Suze Youance, ing., Ph.D., ASC-C.Dir., Tracy Paulotte y Marsha Bazile, M. Adm. Animado por Fabrice Horace, este intercambio exploró las intersecciones entre política, arte y tecnología al servicio del progreso y la excelencia negra. Una conversación inspiradora sobre la perseverancia, el liderazgo y el impacto que cada uno puede tener en su comunidad.',
         members: ['Fabrice Horace'],
         url: 'https://youtu.be/2jTzoMuX5Ns?si=o3CbrEdoYtjcNXdT',
-        thumbnail: 'https://img.youtube.com/vi/qwRCO1xuxyk/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/o3CbrEdoYtjcNXdT/hqdefault.jpg',
       },
       {
         title: 'Podcast #11 ISF ÉTS — Philippe Terrier',
@@ -348,7 +348,7 @@ export const es: Translation = {
         longDescription: 'Profundiza en la noción de low tech, presentándola menos como un conjunto de tecnologías que como una manera de habitar el mundo. La low tech es un enfoque crítico que invita a repensar nuestra relación con las herramientas tecnológicas. Tiene en cuenta los efectos indeseables de lo digital, incluido el efecto rebote y la acumulación de "tecnologías zombi", es decir, dispositivos en desuso que se acumulan en nuestros cajones, como los antiguos teléfonos celulares. Al igual que la filosofía del decrecimiento económico, la low tech promueve un uso más sobrio, reflexivo y responsable de las tecnologías, prestando especial atención a la gestión de recursos a lo largo del ciclo de vida de los objetos.',
         members: ['Jonathan Mahan', 'Clara St-Leger'],
         url: 'https://youtu.be/uA5JLo37ryQ?si=MaxzE9zEtf9deYUi',
-        thumbnail: 'https://img.youtube.com/vi/qwRCO1xuxyk/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/MaxzE9zEtf9deYUi/hqdefault.jpg',
       },
       {
         title: 'ISF ING 3.0 #3 - Zineb El Alami',
@@ -357,7 +357,7 @@ export const es: Translation = {
         longDescription: 'Apasionada por el desarrollo del potencial humano, acompaña a los estudiantes en su transición al mercado laboral ayudándoles a conocerse mejor, desarrollar su empleabilidad y tener éxito en su experiencia de prácticas. Su enfoque combina el autoconocimiento, el desarrollo profesional y el acompañamiento humano para favorecer el éxito y la realización de cada estudiante.',
         members: ['Eliott Baltz', ''],
         url: 'https://youtu.be/H5mgGEi1y3o?si=AmNPk6SAN-d1sQnz',
-        thumbnail: 'https://img.youtube.com/vi/qwRCO1xuxyk/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/AmNPk6SAN-d1sQnz/hqdefault.jpg',
       },
     ],
   },
