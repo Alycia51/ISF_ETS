@@ -355,7 +355,7 @@ export const es: Translation = {
         guest: 'Zineb El Alami - Coordinadora de prácticas y formadora certificada NOVA',
         description: 'Zineb El Alami, coordinadora de prácticas y formadora certificada NOVA, nos habla del desarrollo del potencial humano y el acompañamiento de los estudiantes hacia el mercado laboral.',
         longDescription: 'Apasionada por el desarrollo del potencial humano, acompaña a los estudiantes en su transición al mercado laboral ayudándoles a conocerse mejor, desarrollar su empleabilidad y tener éxito en su experiencia de prácticas. Su enfoque combina el autoconocimiento, el desarrollo profesional y el acompañamiento humano para favorecer el éxito y la realización de cada estudiante.',
-        members: ['Eliott Baltz', ''],
+        members: ['Eliott Baltz', 'Paul Rommel Douanla Zebaze'],
         url: 'https://youtu.be/H5mgGEi1y3o?si=AmNPk6SAN-d1sQnz',
         thumbnail: 'https://img.youtube.com/vi/H5mgGEi1y3o/maxresdefault.jpg',
       },

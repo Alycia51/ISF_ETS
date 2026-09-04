@@ -355,7 +355,7 @@ export const en: Translation = {
         guest: 'Zineb El Alami - Internship Coordinator and Certified NOVA Trainer',
         description: 'Zineb El Alami, internship coordinator and certified NOVA trainer, talks to us about developing human potential and supporting students in their transition to the job market.',
         longDescription: 'Passionate about developing human potential, she supports students in their transition to the job market by helping them better know themselves, develop their employability and succeed in their internship experience. Her approach combines self-knowledge, professional development and human support to foster the success and fulfillment of each student.',
-        members: ['Eliott Baltz', ''],
+        members: ['Eliott Baltz', 'Paul Rommel Douanla Zebaze'],
         url: 'https://youtu.be/H5mgGEi1y3o?si=AmNPk6SAN-d1sQnz',
         thumbnail: 'https://img.youtube.com/vi/H5mgGEi1y3o/maxresdefault.jpg',
       },

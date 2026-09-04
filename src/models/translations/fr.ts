@@ -357,7 +357,7 @@ export const fr: Translation = {
         guest: 'Zineb El Alami - Coordonnatrice de stages et formatrice certifiée NOVA',
         description: 'Zineb El Alami, coordonnatrice de stages et formatrice certifiée NOVA, nous parle du développement du potentiel humain et de l\'accompagnement des étudiants vers le marché du travail.',
         longDescription: 'Passionnée par le développement du potentiel humain, elle accompagne les étudiants dans leur transition vers le marché du travail en les aidant à mieux se connaître, à développer leur employabilité et à réussir leur expérience de stage. Son approche allie connaissance de soi, développement professionnel et accompagnement humain afin de favoriser la réussite et l\'épanouissement de chaque étudiant.',
-        members: ['Eliott Baltz', ''],
+        members: ['Eliott Baltz', 'Paul Rommel Douanla Zebaze'],
         url: 'https://youtu.be/H5mgGEi1y3o?si=AmNPk6SAN-d1sQnz',
         thumbnail: 'https://img.youtube.com/vi/H5mgGEi1y3o/maxresdefault.jpg',
       },
