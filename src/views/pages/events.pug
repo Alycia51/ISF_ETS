@@ -13,7 +13,8 @@ block content
         each event in t.events.upcoming
           .event-card
             .event-date
-              span.day #{event.date}
+              //span.day #{event.date}
+              span.day(class=event.date.length > 2 ? 'day--range' : '') #{event.date}
               span.month #{event.month}
             .event-info
               span.event-type #{event.type}

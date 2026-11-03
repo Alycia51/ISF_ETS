@@ -37,7 +37,7 @@ block content
         p #{t.home.aboutText}
         a.link-more(href=`/${locale}/mission`) #{t.home.aboutBtn} →
 
-  section.faq-section
+    section.faq-section
     .container
       .section-header
         h2 #{t.home.faqTitle}
@@ -50,9 +50,19 @@ block content
             .faq-answer
               p #{item.a}
 
-  section.join-cta
+  section.join-cta.join-cta--sky
+    - var donateUrl = 'https://activitesphilanthropie.etsmtl.ca/CLUBSDONSCIEN/'
+    .cta-sky(aria-hidden='true')
+      - for (var i = 0; i < 90; i++)
+        - var size = (Math.random() * 2 + 1).toFixed(1)
+        span.star(style=`top:${(Math.random()*100).toFixed(1)}%;left:${(Math.random()*100).toFixed(1)}%;width:${size}px;height:${size}px;animation-delay:${(Math.random()*4).toFixed(2)}s;animation-duration:${(Math.random()*3+2).toFixed(2)}s`)
+      span.shooting-star.shooting-star--1
+      span.shooting-star.shooting-star--2
+      span.shooting-star.shooting-star--3
     .container
       .cta-card
         h2 #{t.home.joinTitle}
         p #{t.home.joinText}
-        a.btn.btn--white(href=`/${locale}/contact`) #{t.home.joinBtn}
+        .cta-actions
+          a.btn.btn--white(href=`/${locale}/contact`) #{t.home.joinBtn}
+          a.btn.btn--donate(href=donateUrl target='_blank' rel='noopener') #{t.home.donateBtn}

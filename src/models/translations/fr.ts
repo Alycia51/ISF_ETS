@@ -3,10 +3,13 @@ import { Translation } from '../types';
 export const fr: Translation = {
   nav: {
     home: 'Accueil',
+    about: 'À propos',
     mission: 'Notre Mission',
+    members: 'Nos Membres',
     projects: 'Nos Réalisations',
     events: 'Événements',
-    members: 'Nos Membres',
+    partners: 'Partenaires',
+    blog: 'Blogue',
     contact: 'Contact',
     projectsDropdown: {
       histoire:  'Notre Histoire, Notre Impact',
@@ -15,7 +18,6 @@ export const fr: Translation = {
       collecte:  'Collecte de vêtements',
       autres:    'Autres',
     },
-    blog: 'Blogue',
   },
   home: {
     heroTitle: 'Ingénieurs Sans Frontières',
@@ -35,6 +37,7 @@ export const fr: Translation = {
     joinTitle: 'Prêt à changer le monde?',
     joinText: 'Rejoins une communauté d\'ingénieurs engagés. Que tu sois en première année ou en fin de parcours, ta contribution compte.',
     joinBtn: 'Nous contacter',
+    donateBtn: 'Faire un don',
     faqTitle: 'Questions Fréquentes',
     faqItems: [
     { q: 'Est-ce que j\'ai besoin d\'expérience préalable?', a: 'Non, seulement de la motivation et l\'envie d\'apprendre. On accepte les étudiant·e·s de tous les programmes de génie, peu importe l\'année.' },
@@ -184,6 +187,7 @@ export const fr: Translation = {
     title: 'Calendrier 2026–2027',
     subtitle: 'Découvre toutes nos activités prévues pour l\'année. Rejoins-nous et implique-toi!',
     upcoming: [
+      { date: '27–30', month: 'OCT', title: 'Tournoi intramural interprogrammes', location: 'Centre sportif de l\'ÉTS', description: 'Quatre jours de compétition amicale entre les programmes de l\'ÉTS : basketball 3 contre 3, volleyball, badminton et futsal. Viens représenter ton programme, encourager ton équipe et courir la chance de remporter des prix!', type: 'Sport' },
       { date: 'AUT', month: '2026', title: 'Portes ouvertes de l\'ÉTS', location: 'Hall du pavillon A, ÉTS', description: 'Journée portes ouvertes de l\'École de technologie supérieure. ISF ÉTS y tient un kiosque dans le hall du pavillon A pour présenter notre club aux futurs et nouveaux étudiants curieux de découvrir la vie étudiante en génie.', type: 'Portes ouvertes' },
       { date: 'AUT', month: '2026', title: 'Carrières Sans Frontières', location: 'Campus ÉTS, Montréal', description: 'Événement annuel mettant en contact des étudiants en génie avec des professionnels venant de parcours et de cultures différents, pour montrer que la réussite est accessible à tous quelle que soit son origine. Ateliers, conférences et networking. Nous accueillons également des jeunes du secondaire pour leur faire découvrir la profession d\'ingénieur et le quotidien étudiant en génie.', type: 'Événement' },
       { date: 'AUT', month: '2026', title: 'Don de nourriture & vêtements', location: 'Campus ÉTS, Montréal', description: 'Collecte solidaire de denrées alimentaires et de vêtements au profit d\'organismes communautaires locaux. Chaque don compte!', type: 'Collecte' },
@@ -382,6 +386,86 @@ export const fr: Translation = {
     infoTitle: 'Informations de contact',
     address: '1100 rue Notre-Dame Ouest, Montréal, QC H3C 1K3',
     email: 'isfets@ens.etsmtl.ca',
+  },
+  partners: {
+    badge: 'Saison 2026–2027',
+    heroTitle: 'Ils jouent dans notre',
+    heroAccent: 'équipe.',
+    heroText: 'Chaque partenaire est une carte maîtresse de notre jeu : grâce à eux, nos projets, nos événements et notre balado deviennent possibles. Survolez le paquet pour le déployer.',
+    joinBtn: 'Rejoindre le jeu',
+    packagesBtn: 'Voir les forfaits',
+    handLabel: 'Un paquet de cartes représentant nos niveaux de partenariat',
+    partnerSingular: 'partenaire',
+    partnerPlural: 'partenaires',
+    orHandLabel: 'Carte à gagner',
+    visitSite: 'Visiter le site →',
+    tiers: {
+      diamant: { eyebrow: '◆ Les cartes maîtresses', title: 'Diamant' },
+      or:      { eyebrow: '? La carte à gagner',     title: 'Or' },
+      argent:  { eyebrow: '● Les fidèles alliés',     title: 'Argent' },
+      bronze:  { eyebrow: '▲ Les premiers appuis',    title: 'Bronze' },
+      special: { eyebrow: '★ Le joker',               title: 'Spécial' },
+    },
+    orSlot: {
+      hiddenTitle: 'Carte face cachée',
+      hiddenHint: 'Survolez pour la retourner',
+      title: 'Votre logo ici',
+      text: 'Devenez notre tout premier partenaire Or.',
+      btn: 'Nous écrire',
+    },
+    vlog: {
+      eyebrow: 'Vlog / Blog',
+      title: 'La parole à nos partenaires Diamant',
+      text: 'Vidéos et billets envoyés par nos partenaires. Cliquez sur une carte pour lire le message complet.',
+      readMore: 'Lire la suite →',
+      watch: 'Regarder la vidéo',
+      empty: 'Les premiers contenus de nos partenaires arrivent bientôt. Revenez nous voir!',
+    },
+    posts: [
+      // Exemple à copier quand un partenaire Diamant envoie du contenu :
+      // { partner: 'Ordre des ingénieurs du Québec', format: 'Vidéo', title: 'Titre du billet', excerpt: 'Aperçu de deux ou trois lignes…', text: 'Message complet (250 mots maximum)', video: 'https://youtu.be/...', image: '/images/partenaires/oiq-billet.jpg' },
+    ],
+    packages: {
+      title: 'Nos forfaits de partenariat',
+      text: 'Choisissez le niveau qui vous ressemble.',
+      show: 'Voir tous les avantages ▾',
+      hide: 'Masquer les avantages ▴',
+      header: 'Avantages inclus',
+      included: 'Inclus',
+      notIncluded: 'Non inclus',
+      tiers: [
+        { name: 'Bronze',  price: '300 $',   perks: ['Kiosque à Carrières sans Frontières', 'Infolettre ISF-ÉTS et ÉTS'] },
+        { name: 'Argent',  price: '500 $',   perks: ['Tout Bronze', 'Petit logo cliquable sur le site', 'Remerciement en groupe'] },
+        { name: 'Or',      price: '1 000 $', perks: ['Tout Argent', 'Logo moyen, écrans et t-shirts', 'Annonce sur nos réseaux'] },
+        { name: 'Diamant', price: '1 500 $', perks: ['Tout Or', 'Grand logo et bannière principale', 'Prise de parole de 5 à 10 min', 'Billet ou épisode balado dédié'] },
+      ],
+      table: [
+        { title: 'Présence à l\'événement', rows: [
+          { label: 'Venue à Carrières sans Frontières + kiosque',                          values: ['●', '●', '●', '●'] },
+          { label: 'Priorité dans le choix d\'emplacement du kiosque',                     values: ['Priorité 4', 'Priorité 3', 'Priorité 2', 'Priorité 1'] },
+          { label: 'Prise de parole devant les étudiants',                                 values: ['—', '—', '—', '5–10 min'] },
+          { label: 'Prix / concours au nom de l\'entreprise',                              values: ['—', '—', '—', '●'] },
+          { label: 'Photo d\'un membre clé de l\'équipe affichée sur les colonnes de l\'ÉTS', values: ['—', '—', '—', '●'] },
+        ] },
+        { title: 'Visibilité numérique', rows: [
+          { label: 'Publication dans l\'infolettre d\'ISF-ÉTS et de l\'ÉTS',               values: ['●', '●', '●', '●'] },
+          { label: 'Annonce de l\'entreprise sur nos réseaux sociaux avant l\'événement',  values: ['—', '—', '●', '●'] },
+          { label: 'Remerciement sur nos réseaux sociaux après l\'événement',              values: ['—', 'En groupe', 'En groupe', 'Individuel'] },
+          { label: 'Article de blogue ou épisode balado dédié',                            values: ['—', '—', '—', '●'] },
+        ] },
+        { title: 'Visibilité physique', rows: [
+          { label: 'Logo cliquable sur le site web (lien vers votre site)',                values: ['—', 'Petit', 'Moyen', 'Grand'] },
+          { label: 'Taille du logo sur les affiches le jour de l\'événement',              values: ['—', 'Petit', 'Moyen', 'Grand'] },
+          { label: 'Logo affiché sur les écrans en auditorium',                            values: ['—', '—', '●', '●'] },
+          { label: 'Logo sur les t-shirts des bénévoles',                                  values: ['—', '—', '●', '●'] },
+          { label: 'Logo sur la bannière principale de l\'événement',                      values: ['—', '—', '—', '●'] },
+        ] },
+        { title: 'Relation & reconnaissance', rows: [
+          { label: 'Présence à nos activités de réseautage',                               values: ['—', '—', '●', '●'] },
+          { label: 'Mention dans le rapport d\'impact annuel',                             values: ['—', '—', '●', '●'] },
+        ] },
+      ],
+    },
   },
   footer: {
     description: 'Club ISF de l\'ÉTS — Mettre le génie au service de l\'humanité depuis 2012.',

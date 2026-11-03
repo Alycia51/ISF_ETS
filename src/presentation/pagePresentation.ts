@@ -2,6 +2,7 @@ import { Locale, PageData, Translation } from '../models/types';
 import { fr } from '../models/translations/fr';
 import { en } from '../models/translations/en';
 import { es } from '../models/translations/es';
+import { partnersList } from '../models/partners';
 
 const translations: Record<Locale, Translation> = { fr, en, es };
 
@@ -23,6 +24,7 @@ export class PagePresentation {
       t: translations[locale],
       page,
       availableLocales,
+      partnersList,
     };
   }
 }

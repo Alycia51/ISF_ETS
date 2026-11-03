@@ -1,10 +1,12 @@
 export interface Translation {
   nav: {
     home: string;
+    about: string;
     mission: string;
+    members: string;
     projects: string;
     events: string;
-    members: string;
+    partners: string;
     blog: string;
     contact: string;
     projectsDropdown: {
@@ -28,6 +30,7 @@ export interface Translation {
     joinTitle: string;
     joinText: string;
     joinBtn: string;
+    donateBtn: string;
     faqTitle: string;
     faqItems: { q: string; a: string }[];
     testimonialsTitle: string;
@@ -109,6 +112,40 @@ export interface Translation {
     address: string;
     email: string;
   };
+  partners: {
+    badge: string;
+    heroTitle: string;
+    heroAccent: string;
+    heroText: string;
+    joinBtn: string;
+    packagesBtn: string;
+    handLabel: string;
+    partnerSingular: string;
+    partnerPlural: string;
+    orHandLabel: string;
+    visitSite: string;
+    tiers: {
+      diamant: { eyebrow: string; title: string };
+      or:      { eyebrow: string; title: string };
+      argent:  { eyebrow: string; title: string };
+      bronze:  { eyebrow: string; title: string };
+      special: { eyebrow: string; title: string };
+    };
+    orSlot: { hiddenTitle: string; hiddenHint: string; title: string; text: string; btn: string };
+    vlog: { eyebrow: string; title: string; text: string; readMore: string; watch: string; empty: string };
+    posts: { partner: string; format: string; title: string; excerpt: string; text: string; video?: string; image?: string }[];
+    packages: {
+      title: string;
+      text: string;
+      show: string;
+      hide: string;
+      header: string;
+      included: string;
+      notIncluded: string;
+      tiers: { name: string; price: string; perks: string[] }[];
+      table: { title: string; rows: { label: string; values: string[] }[] }[];
+    };
+  };
   footer: {
     description: string;
     quickLinks: string;
@@ -124,4 +161,15 @@ export interface PageData {
   t: Translation;
   page: string;
   availableLocales: { code: Locale; label: string }[];
+  partnersList: Partner[];
+}
+
+export type PartnerTier = 'diamant' | 'or' | 'argent' | 'bronze' | 'special';
+
+export interface Partner {
+  name: string;
+  tier: PartnerTier;
+  initials: string;
+  logo?: string;
+  url?: string;
 }

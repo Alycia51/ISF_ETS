@@ -47,6 +47,7 @@ const routes: { slug: string; view: string; page: string }[] = [
   { slug: 'realisations/regards',                view: 'projects/regards',  page: 'projects'    },
   { slug: 'realisations/collecte',               view: 'projects/collecte', page: 'projects'    },
   { slug: 'realisations/autres',                 view: 'projects/autres',   page: 'projects'    },
+  { slug: 'partenaires',                         view: 'partners',          page: 'partners'    },
 ];
 
 routes.forEach(({ slug, view, page }) => {
@@ -89,6 +90,7 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
   <url><loc>https://isf-ets.ca/fr/membres</loc></url>
   <url><loc>https://isf-ets.ca/fr/blogue</loc></url>
   <url><loc>https://isf-ets.ca/fr/contact</loc></url>
+  <url><loc>https://isf-ets.ca/fr/partenaires</loc></url>
 </urlset>`);
 });
 
