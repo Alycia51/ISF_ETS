@@ -1,0 +1,71 @@
+/* ── ANIMATIONS ── */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+/* Stars & Sky in Home CTA */
+.join-cta--sky {
+  background: linear-gradient(180deg, #05071a 0%, #120a24 45%, #3d0a14 100%);
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  animation-name: twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 140px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.6) 20%, rgba(255, 255, 255, 0) 100%);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+  opacity: 0;
+  animation: shoot 9s linear infinite;
+}
+
+.shooting-star--1 { top: 8%; left: 85%; animation-delay: 1s; }
+.shooting-star--2 { top: 20%; left: 60%; animation-delay: 4.5s; }
+.shooting-star--3 { top: 4%; left: 40%; animation-delay: 7s; }
+
+@keyframes shoot {
+  0% { opacity: 0; transform: rotate(-31deg) translateX(0); }
+  3% { opacity: 1; }
+  15% { opacity: 0; transform: rotate(-31deg) translateX(-650px); }
+  100% { opacity: 0; transform: rotate(-31deg) translateX(-650px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star, .shooting-star { animation: none; }
+  .shooting-star { display: none; }
+}

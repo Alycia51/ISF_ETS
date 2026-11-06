@@ -47,5 +47,4 @@ nav.navbar(id='navbar')
       .lang-menu(id='langMenu')
         each loc in availableLocales
           a.lang-option(href=`/${loc.code}` class=locale===loc.code?'active':'')
-            
             span #{loc.label}

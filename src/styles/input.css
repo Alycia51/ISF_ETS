@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@source "../views/**/*.pug";
+@source "../public/js/**/*.js";
+
+@theme {
+  --color-brand-red: #D42B2B;
+  --color-brand-red-dark: #A81E1E;
+  --color-brand-red-light: #F5E5E5;
+  --color-brand-red-glow: rgba(212, 43, 43, 0.12);
+
+  --color-brand-black: #111111;
+  --color-brand-gray-900: #1A1A1A;
+  --color-brand-gray-800: #2A2A2A;
+  --color-brand-gray-600: #555555;
+  --color-brand-gray-400: #999999;
+  --color-brand-gray-100: #F5F5F5;
+  --color-brand-cream: #FAFAF8;
+  --color-brand-accent: #F0A500;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+}
+
+@import "./components/general.css";
+@import "./components/navbar.css";
+@import "./components/animations.css";
+@import "./components/lightbox.css";
+@import "./components/vintage.css";
+@import "./components/partners.css";

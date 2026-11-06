@@ -18,9 +18,10 @@ html(lang=locale)
     meta(property='og:url' content='https://isf-ets.ca')
     meta(property='og:type' content='website')
 
-  body
+  body.font-body.text-base.leading-relaxed.text-brand-black.bg-white.overflow-x-hidden.antialiased
     include ../partials/navbar
-    main
+    main.pt-0
       block content
     include ../partials/footer
-    script(src='/js/main.js')
+    script(type='module' src='/js/main.js')
+    block scripts
