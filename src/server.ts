@@ -1,9 +1,8 @@
 import 'dotenv/config';
 import express, { Request, Response } from 'express';
 import path from 'path';
+import fs from 'fs';
 import nodemailer from 'nodemailer';
-import { PagePresentation } from './presentation/pagePresentation';
-import { Locale } from './models/types';
 
 const mailer = nodemailer.createTransport({
   host: 'smtp.office365.com',
@@ -18,44 +17,8 @@ const mailer = nodemailer.createTransport({
 
 const app = express();
 
-app.set('view engine', 'pug');
-app.set('views', path.join(process.cwd(), 'src', 'views'));
-app.use(express.static(path.join(process.cwd(), 'src', 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Root → redirect FR
-app.get('/', (_req: Request, res: Response) => res.redirect('/fr'));
-
-// Home
-app.get('/:locale(fr|en|es)', (req: Request, res: Response) => {
-  const locale = PagePresentation.getLocale(req.params.locale) as Locale;
-  res.render('pages/home', PagePresentation.buildPageData(locale, 'home'));
-});
-
-// Autres pages
-const routes: { slug: string; view: string; page: string }[] = [
-  { slug: 'mission',      view: 'mission',   page: 'mission'   },
-  { slug: 'evenements',   view: 'events',    page: 'events'    },
-  { slug: 'membres',      view: 'members',   page: 'members'   },
-  { slug: 'blogue',       view: 'blog',      page: 'blog'      },
-  { slug: 'contact',      view: 'contact',   page: 'contact'   },
-  // Sous-pages réalisations
-  { slug: 'realisations',                        view: 'projects/index',    page: 'projects'    },
-  { slug: 'realisations/notre-histoire',         view: 'projects/histoire', page: 'projects'    },
-  { slug: 'realisations/carrieres',              view: 'projects/carrieres',page: 'projects'    },
-  { slug: 'realisations/regards',                view: 'projects/regards',  page: 'projects'    },
-  { slug: 'realisations/collecte',               view: 'projects/collecte', page: 'projects'    },
-  { slug: 'realisations/autres',                 view: 'projects/autres',   page: 'projects'    },
-  { slug: 'partenaires',                         view: 'partners',          page: 'partners'    },
-];
-
-routes.forEach(({ slug, view, page }) => {
-  app.get(`/:locale(fr|en|es)/${slug}`, (req: Request, res: Response) => {
-    const locale = PagePresentation.getLocale(req.params.locale) as Locale;
-    res.render(`pages/${view}`, PagePresentation.buildPageData(locale, page));
-  });
-});
 
 // API formulaire contact
 app.post('/api/contact', async (req: Request, res: Response) => {
@@ -75,10 +38,11 @@ app.post('/api/contact', async (req: Request, res: Response) => {
     res.json({ success: true });
   } catch (err) {
     console.error('❌ Erreur envoi courriel:', err);
-    res.status(500).json({ success: false, error: 'Erreur lors de l\'envoi' });
+    res.status(500).json({ success: false, error: "Erreur lors de l'envoi" });
   }
 });
 
+// Sitemap XML
 app.get('/sitemap.xml', (_req: Request, res: Response) => {
   res.header('Content-Type', 'application/xml');
   res.send(`<?xml version="1.0" encoding="UTF-8"?>
@@ -94,10 +58,19 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
 </urlset>`);
 });
 
-// 404 fallback
-app.use((_req: Request, res: Response) => res.redirect('/fr'));
+// Production SPA static server
+const distDir = path.join(process.cwd(), 'dist');
+if (fs.existsSync(distDir)) {
+  app.use(express.static(distDir));
+  app.get('*', (_req: Request, res: Response) => {
+    res.sendFile(path.join(distDir, 'index.html'));
+  });
+} else {
+  // Development fallback redirect
+  app.get('/', (_req: Request, res: Response) => res.redirect('/fr'));
+}
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`ISF ÉTS → http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`ISF ÉTS Server → http://localhost:${PORT}`));
 
 export default app;
