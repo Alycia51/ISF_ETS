@@ -1,5 +1,5 @@
 import { Translation } from '../types';
-import { laSallePost } from '../partnerPosts';
+import { laSallePost, oiqPost } from '../partnerPosts';
 
 export const en: Translation = {
   nav: {
@@ -435,12 +435,13 @@ export const en: Translation = {
       text: 'Videos and posts sent by our partners. Click a card to read the full message.',
       readMore: 'Read more →',
       watch: 'Watch the video',
+      readOn: 'Read the full article',
       empty: 'The first content from our partners is coming soon. Check back with us!',
       by: 'By',
       langNote: 'This post was originally written in French.',
       formats: { blog: 'Blog post', video: 'Video' },
     },
-    posts: [laSallePost],
+    posts: [oiqPost, laSallePost],
     cta: {
       title: 'Want to join our team?',
       text: 'For more information about our partnerships or to find out how to become a partner, get in touch! We\'ll be happy to answer you.',

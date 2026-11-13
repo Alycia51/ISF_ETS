@@ -2,7 +2,7 @@ import { Partner } from './types';
 
 export const partnersList: Partner[] = [
   // ── Diamant ──
-  { name: 'Collège LaSalle',                tier: 'diamant', initials: 'CL',  logo: '', url: 'https://www.collegelasalle.com' },
+  { name: 'Collège LaSalle',                tier: 'diamant', initials: 'CL',  logo: '/images/partenaires/college-lasalle.png', url: 'https://www.collegelasalle.com' },
   { name: 'Groupe Techno Ref4',             tier: 'diamant', initials: 'GTR', logo: '', url: '' },
   { name: 'Ordre des ingénieurs du Québec', tier: 'diamant', initials: 'OIQ', logo: '', url: 'https://www.oiq.qc.ca' },
   { name: 'Printemps numérique',            tier: 'diamant', initials: 'PN',  logo: '', url: 'https://printempsnumerique.ca' },
@@ -16,6 +16,7 @@ export const partnersList: Partner[] = [
   { name: 'PlumeAI',                        tier: 'argent',  initials: 'PAI', logo: '', url: '' },
   { name: 'Pratt & Whitney Canada',         tier: 'argent',  initials: 'P&W', logo: '', url: 'https://www.pwc.ca' },
   { name: 'Banque Nationale',               tier: 'argent',  initials: 'BN',  logo: '', url: 'https://www.bnc.ca' },
+  { name: 'Ubisoft',                        tier: 'argent',  initials: 'UBI', logo: '', url: 'https://montreal.ubisoft.com' },
   { name: 'Totem Recruteur de Talent',      tier: 'argent',  initials: 'TOT', logo: '', url: '' },
   { name: 'Médecins Sans Frontières',       tier: 'argent',  initials: 'MSF', logo: '', url: 'https://www.msf.ca' },
   { name: 'Cameroon Jewels',                tier: 'argent',  initials: 'CJ',  logo: '', url: '' },

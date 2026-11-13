@@ -1458,7 +1458,7 @@ h1, h2, h3, h4 { font-family: var(--font-body); font-weight: 500; letter-spacing
 .pvlog { padding: 88px 0 40px; }
 .pvlog-eyebrow { margin: 0 0 8px; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
 .pvlog-title { margin: 0 0 10px; font-family: var(--font-display); font-weight: 800; font-size: 34px; }
-.pvlog-text { margin: 0 0 32px; max-width: 620px; font-size: 16px; line-height: 1.65; color: var(--gray-600); }
+.pvlog-text { margin: 0 0 32px; max-width: none; font-size: 16px; line-height: 1.65; color: var(--gray-600); }
 .pvlog-empty {
   padding: 36px; border-radius: 20px; background: var(--white);
   border: 2px dashed #E6DCC8; text-align: center; color: var(--gray-600); font-size: 15px;
@@ -1529,6 +1529,7 @@ h1, h2, h3, h4 { font-family: var(--font-body); font-weight: 500; letter-spacing
 .post-full-title { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 24px; }
 .post-full-text { margin: 0; font-size: 15px; line-height: 1.75; color: var(--gray-600); white-space: pre-line; }
 .post-modal-body .btn { align-self: flex-start; margin-top: 6px; }
+.post-full-link { align-self: flex-start; margin-top: 8px; }
 
 /* Carte avec logo du partenaire */
 .pvlog-media--logo {

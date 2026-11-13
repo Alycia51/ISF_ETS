@@ -4,7 +4,7 @@ export const laSallePost: PartnerPost = {
   partner: 'Collège LaSalle',
   format: 'blog',
   lang: 'fr',
-  logo: 'src/public/images/partenaires/college-lasalle.png',
+  logo: '/images/partenaires/college-lasalle.png',
   author: 'Kwemou Ngameni Donel Juberal',
   title: 'Plus qu\'un diplôme : ce que mon parcours de DEC en informatique m\'a apporté',
   excerpt: 'Quand j\'ai commencé mon DEC en informatique au Collège LaSalle, je pensais surtout apprendre à programmer. Je ne savais pas encore que j\'allais aussi apprendre à mieux me connaître.',
@@ -30,6 +30,27 @@ export const laSallePost: PartnerPost = {
     {
       heading: 'Mon conseil aux élèves du secondaire',
       body: 'Si vous hésitez sur le choix de votre programme, ne regardez pas seulement les notes. Regardez aussi les gens, l\'ambiance et le soutien offert aux étudiants. Une formation, ce sont des rencontres, des défis, des moments plus durs et des personnes qui nous aident à les traverser. C\'est ce qui reste bien après les examens, et c\'est ce qui change notre façon de voir l\'avenir.',
+    },
+  ],
+};
+
+export const oiqPost: PartnerPost = {
+  partner: 'Ordre des ingénieurs du Québec',
+  format: 'blog',
+  lang: 'fr',
+  image: '/images/partenaires/oiq-cpi.png',
+  url: 'https://www.oiq.qc.ca/publication/cpi-avant-de-sappeler-ingenieur-e/',
+  title: 'CPI : avant de s\'appeler ingénieur·e',
+  excerpt: 'Au Québec, un diplôme en génie ne suffit pas pour porter le titre d\'ingénieur·e. L\'Ordre explique ce qu\'est le statut de CPI et pourquoi c\'est la première étape de ton parcours vers le permis.',
+  intro: 'Tu termines ton bac, tu accumules les stages, tu as peut-être déjà des certifications… mais au Québec, le diplôme en génie ne donne pas à lui seul le droit d\'utiliser le titre d\'ingénieur·e. Il faut obtenir un permis d\'exercice et être inscrit au Tableau de l\'Ordre.',
+  sections: [
+    {
+      heading: 'Le statut de CPI, c\'est quoi?',
+      body: 'Le statut de candidat·e à la profession d\'ingénieur (CPI) marque ton entrée officielle dans ce parcours encadré. Il combine un volet théorique et au moins 24 mois d\'expérience supervisée, pour te préparer à exercer avec jugement et responsabilité.',
+    },
+    {
+      heading: 'Pour aller plus loin',
+      body: 'L\'Ordre des ingénieurs du Québec détaille toutes les étapes, les conditions et les ressources offertes aux CPI dans l\'article complet. Clique sur le bouton ci-dessous pour le lire sur leur site.',
     },
   ],
 };

@@ -144,7 +144,7 @@ export interface Translation {
     orSlot: { hiddenTitle: string; hiddenHint: string; title: string; text: string; btn: string };
     vlog: {
       eyebrow: string; title: string; text: string;
-      readMore: string; watch: string; empty: string;
+      readMore: string; watch: string; readOn: string; empty: string;
       by: string; langNote: string;
       formats: { blog: string; video: string };
     };
@@ -192,4 +192,5 @@ export interface PartnerPost {
   video?: string;
   image?: string;
   logo?: string;
+  url?: string;
 }

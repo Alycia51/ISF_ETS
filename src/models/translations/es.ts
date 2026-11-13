@@ -1,5 +1,5 @@
 import { Translation } from '../types';
-import { laSallePost } from '../partnerPosts';
+import { laSallePost, oiqPost } from '../partnerPosts';
 
 export const es: Translation = {
   nav: {
@@ -435,12 +435,13 @@ export const es: Translation = {
       text: 'Videos y artículos enviados por nuestros socios. Haz clic en una tarjeta para leer el mensaje completo.',
       readMore: 'Leer más →',
       watch: 'Ver el video',
+      readOn: 'Leer el artículo completo',
       empty: 'Los primeros contenidos de nuestros socios llegarán pronto. ¡Vuelve a visitarnos!',
       by: 'Por',
       langNote: 'Este artículo fue escrito originalmente en francés.',
       formats: { blog: 'Artículo', video: 'Video' },
     },
-    posts: [laSallePost],
+    posts: [oiqPost, laSallePost],
     cta: {
       title: '¿Quieres jugar en nuestro equipo?',
       text: 'Para más información sobre nuestras alianzas o para saber cómo convertirte en socio, ¡contáctanos! Con gusto te responderemos.',

@@ -181,6 +181,8 @@ block content
                   each sec in post.sections || []
                     h4.post-full-heading #{sec.heading}
                     p.post-full-text #{sec.body}
+                  if post.url
+                    a.btn.btn--primary.post-full-link(href=post.url target='_blank' rel='noopener') #{P.vlog.readOn} ↗
                   if post.video
                     a.btn.btn--primary(href=post.video target='_blank' rel='noopener') ▶ #{P.vlog.watch}
         else
