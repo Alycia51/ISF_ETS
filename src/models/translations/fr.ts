@@ -1,4 +1,5 @@
 import { Translation } from '../types';
+import { laSallePost } from '../partnerPosts';
 
 export const fr: Translation = {
   nav: {
@@ -14,6 +15,7 @@ export const fr: Translation = {
     projectsDropdown: {
       histoire:  'Notre Histoire, Notre Impact',
       carrieres: 'Carrières Sans Frontières',
+      tournoi:   'Tournoi intramural',
       regards:   'Regards sur le Monde',
       collecte:  'Collecte de vêtements',
       autres:    'Autres',
@@ -121,6 +123,22 @@ export const fr: Translation = {
         description: 'Carrières Sans Frontières est un événement annuel qui met en contact des étudiants en génie avec des professionnels venant de parcours et de cultures différents, pour montrer que la réussite est accessible à tous quelle que soit son origine. Ateliers, conférences et networking pour explorer comment allier carrière et impact social. Nous accueillons également des jeunes du secondaire pour leur faire découvrir la profession d\'ingénieur et le quotidien étudiant en génie.',
         partners: [],
         photos: [],
+      },
+      tournoi: {
+        label: 'Tournoi intramural',
+        title: 'Tournoi intramural',
+        subtitle: 'Quatre sports, quatre jours, une seule communauté.',
+        description: 'Le Grand Tournoi Intramural est arrivé à l\'ÉTS 🏆 ⚽ Futsal • 🏀 Basketball • 🏐 Volleyball • 🏸 Badminton. Une semaine pour représenter son programme dans quatre disciplines et couronner les vainqueur·e·s de l\'ÉTS, le Centre sportif de l\'ÉTS vibrera au rythme de la compétition 🔥 Viens pour gagner, te dépasser ou simplement profiter de l\'ambiance!',
+        partners: [],
+        photos: [],
+        edition: 'Automne 2026',
+        comingSoon: 'Photos à venir',
+        sports: [
+          { name: 'Volleyball', photos: [] },
+          { name: 'Basketball', photos: [] },
+          { name: 'Badminton',  photos: [] },
+          { name: 'Futsal',     photos: [] },
+        ],
       },
       regards: {
         label: 'Regards sur le Monde',
@@ -393,7 +411,7 @@ export const fr: Translation = {
     heroAccent: 'équipe.',
     heroText: 'Chaque partenaire est une carte maîtresse de notre jeu : grâce à eux, nos projets, nos événements et notre balado deviennent possibles. Survolez le paquet pour le déployer.',
     joinBtn: 'Rejoindre le jeu',
-    packagesBtn: 'Voir les forfaits',
+    packagesBtn: 'Voir nos partenaires',
     handLabel: 'Un paquet de cartes représentant nos niveaux de partenariat',
     partnerSingular: 'partenaire',
     partnerPlural: 'partenaires',
@@ -401,7 +419,7 @@ export const fr: Translation = {
     visitSite: 'Visiter le site →',
     tiers: {
       diamant: { eyebrow: '◆ Les cartes maîtresses', title: 'Diamant' },
-      or:      { eyebrow: '? La carte à gagner',     title: 'Or' },
+      or:      { eyebrow: '★ Les étoiles montantes', title: 'Or' },
       argent:  { eyebrow: '● Les fidèles alliés',     title: 'Argent' },
       bronze:  { eyebrow: '▲ Les premiers appuis',    title: 'Bronze' },
       special: { eyebrow: '★ Le joker',               title: 'Spécial' },
@@ -420,51 +438,15 @@ export const fr: Translation = {
       readMore: 'Lire la suite →',
       watch: 'Regarder la vidéo',
       empty: 'Les premiers contenus de nos partenaires arrivent bientôt. Revenez nous voir!',
+      by: 'Par',
+      langNote: '',
+      formats: { blog: 'Billet', video: 'Vidéo' },
     },
-    posts: [
-      // Exemple à copier quand un partenaire Diamant envoie du contenu :
-      // { partner: 'Ordre des ingénieurs du Québec', format: 'Vidéo', title: 'Titre du billet', excerpt: 'Aperçu de deux ou trois lignes…', text: 'Message complet (250 mots maximum)', video: 'https://youtu.be/...', image: '/images/partenaires/oiq-billet.jpg' },
-    ],
-    packages: {
-      title: 'Nos forfaits de partenariat',
-      text: 'Choisissez le niveau qui vous ressemble.',
-      show: 'Voir tous les avantages ▾',
-      hide: 'Masquer les avantages ▴',
-      header: 'Avantages inclus',
-      included: 'Inclus',
-      notIncluded: 'Non inclus',
-      tiers: [
-        { name: 'Bronze',  price: '300 $',   perks: ['Kiosque à Carrières sans Frontières', 'Infolettre ISF-ÉTS et ÉTS'] },
-        { name: 'Argent',  price: '500 $',   perks: ['Tout Bronze', 'Petit logo cliquable sur le site', 'Remerciement en groupe'] },
-        { name: 'Or',      price: '1 000 $', perks: ['Tout Argent', 'Logo moyen, écrans et t-shirts', 'Annonce sur nos réseaux'] },
-        { name: 'Diamant', price: '1 500 $', perks: ['Tout Or', 'Grand logo et bannière principale', 'Prise de parole de 5 à 10 min', 'Billet ou épisode balado dédié'] },
-      ],
-      table: [
-        { title: 'Présence à l\'événement', rows: [
-          { label: 'Venue à Carrières sans Frontières + kiosque',                          values: ['●', '●', '●', '●'] },
-          { label: 'Priorité dans le choix d\'emplacement du kiosque',                     values: ['Priorité 4', 'Priorité 3', 'Priorité 2', 'Priorité 1'] },
-          { label: 'Prise de parole devant les étudiants',                                 values: ['—', '—', '—', '5–10 min'] },
-          { label: 'Prix / concours au nom de l\'entreprise',                              values: ['—', '—', '—', '●'] },
-          { label: 'Photo d\'un membre clé de l\'équipe affichée sur les colonnes de l\'ÉTS', values: ['—', '—', '—', '●'] },
-        ] },
-        { title: 'Visibilité numérique', rows: [
-          { label: 'Publication dans l\'infolettre d\'ISF-ÉTS et de l\'ÉTS',               values: ['●', '●', '●', '●'] },
-          { label: 'Annonce de l\'entreprise sur nos réseaux sociaux avant l\'événement',  values: ['—', '—', '●', '●'] },
-          { label: 'Remerciement sur nos réseaux sociaux après l\'événement',              values: ['—', 'En groupe', 'En groupe', 'Individuel'] },
-          { label: 'Article de blogue ou épisode balado dédié',                            values: ['—', '—', '—', '●'] },
-        ] },
-        { title: 'Visibilité physique', rows: [
-          { label: 'Logo cliquable sur le site web (lien vers votre site)',                values: ['—', 'Petit', 'Moyen', 'Grand'] },
-          { label: 'Taille du logo sur les affiches le jour de l\'événement',              values: ['—', 'Petit', 'Moyen', 'Grand'] },
-          { label: 'Logo affiché sur les écrans en auditorium',                            values: ['—', '—', '●', '●'] },
-          { label: 'Logo sur les t-shirts des bénévoles',                                  values: ['—', '—', '●', '●'] },
-          { label: 'Logo sur la bannière principale de l\'événement',                      values: ['—', '—', '—', '●'] },
-        ] },
-        { title: 'Relation & reconnaissance', rows: [
-          { label: 'Présence à nos activités de réseautage',                               values: ['—', '—', '●', '●'] },
-          { label: 'Mention dans le rapport d\'impact annuel',                             values: ['—', '—', '●', '●'] },
-        ] },
-      ],
+    posts: [laSallePost],
+    cta: {
+      title: 'Envie de jouer dans notre équipe ?',
+      text: 'Pour plus d\'informations sur nos partenariats ou pour savoir comment devenir partenaire, contactez-nous! Il nous fera plaisir de vous répondre.',
+      btn: 'Nous contacter',
     },
   },
   footer: {

@@ -44,6 +44,7 @@ const routes: { slug: string; view: string; page: string }[] = [
   { slug: 'realisations',                        view: 'projects/index',    page: 'projects'    },
   { slug: 'realisations/notre-histoire',         view: 'projects/histoire', page: 'projects'    },
   { slug: 'realisations/carrieres',              view: 'projects/carrieres',page: 'projects'    },
+  { slug: 'realisations/tournoi',                view: 'projects/tournoi',  page: 'projects'    },
   { slug: 'realisations/regards',                view: 'projects/regards',  page: 'projects'    },
   { slug: 'realisations/collecte',               view: 'projects/collecte', page: 'projects'    },
   { slug: 'realisations/autres',                 view: 'projects/autres',   page: 'projects'    },

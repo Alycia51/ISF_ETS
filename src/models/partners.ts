@@ -6,9 +6,13 @@ export const partnersList: Partner[] = [
   { name: 'Groupe Techno Ref4',             tier: 'diamant', initials: 'GTR', logo: '', url: '' },
   { name: 'Ordre des ingénieurs du Québec', tier: 'diamant', initials: 'OIQ', logo: '', url: 'https://www.oiq.qc.ca' },
   { name: 'Printemps numérique',            tier: 'diamant', initials: 'PN',  logo: '', url: 'https://printempsnumerique.ca' },
+  { name: 'Schneider Electric',             tier: 'diamant', initials: 'SE',  logo: '', url: 'https://www.se.com/ca/fr/' },
+
+  // ── Or ──
+  { name: 'Desjardins',                     tier: 'or',      initials: 'DJ',  logo: '', url: 'https://www.desjardins.com' },
 
   // ── Argent ──
-  { name: 'GBI Experts-conseils',           tier: 'argent',  initials: 'GBI', logo: '', url: '' },
+  { name: 'GBI Experts-conseils',           tier: 'argent',  initials: 'gbi', logo: '', url: '' },
   { name: 'PlumeAI',                        tier: 'argent',  initials: 'PAI', logo: '', url: '' },
   { name: 'Pratt & Whitney Canada',         tier: 'argent',  initials: 'P&W', logo: '', url: 'https://www.pwc.ca' },
   { name: 'Banque Nationale',               tier: 'argent',  initials: 'BN',  logo: '', url: 'https://www.bnc.ca' },
@@ -19,7 +23,4 @@ export const partnersList: Partner[] = [
   // ── Bronze ──
   { name: 'CAE',                            tier: 'bronze',  initials: 'CAE', logo: '', url: 'https://www.cae.com' },
   { name: 'WSP Canada',                     tier: 'bronze',  initials: 'WSP', logo: '', url: 'https://www.wsp.com/fr-ca' },
-
-  // ── Spécial ──
-  { name: 'Schneider Electric',             tier: 'special', initials: 'SE',  logo: '', url: 'https://www.se.com/ca/fr/' },
 ];

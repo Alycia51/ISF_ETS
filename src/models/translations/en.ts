@@ -1,4 +1,5 @@
 import { Translation } from '../types';
+import { laSallePost } from '../partnerPosts';
 
 export const en: Translation = {
   nav: {
@@ -14,6 +15,7 @@ export const en: Translation = {
     projectsDropdown: {
       histoire:  'Our History, Our Impact',
       carrieres: 'Careers Without Borders',
+      tournoi:   'Intramural Tournament',
       regards:   'Views on the World',
       collecte:  'Clothing Drive',
       autres:    'Other',
@@ -114,6 +116,22 @@ export const en: Translation = {
           '/images/realisations/histoire/Conférence/2026_02_13_AfroExcellence-92.jpg',
         ],
         photos: [],
+      },
+      tournoi: {
+        label: 'Intramural Tournament',
+        title: 'Intramural Tournament',
+        subtitle: 'Four sports, four days, one community.',
+        description: 'The Grand Intramural Tournament is coming to ÉTS 🏆 ⚽ Futsal • 🏀 Basketball • 🏐 Volleyball • 🏸 Badminton. One week to represent your program in four disciplines and crown the ÉTS champions, the ÉTS Sports Centre will be buzzing with competition 🔥 Come to win, push your limits or simply enjoy the atmosphere!',
+        partners: [],
+        photos: [],
+        edition: 'Fall 2026',
+        comingSoon: 'Photos coming soon',
+        sports: [
+          { name: 'Volleyball', photos: [] },
+          { name: 'Basketball', photos: [] },
+          { name: 'Badminton',  photos: [] },
+          { name: 'Futsal',     photos: [] },
+        ],
       },
       carrieres: {
         label: 'Careers Without Borders',
@@ -391,7 +409,7 @@ export const en: Translation = {
     heroAccent: 'team.',
     heroText: 'Each partner is a key card in our hand: thanks to them, our projects, events and podcast become possible. Hover over the deck to spread it out.',
     joinBtn: 'Join the game',
-    packagesBtn: 'See our packages',
+    packagesBtn: 'See our partners',
     handLabel: 'A deck of cards representing our partnership levels',
     partnerSingular: 'partner',
     partnerPlural: 'partners',
@@ -399,7 +417,7 @@ export const en: Translation = {
     visitSite: 'Visit website →',
     tiers: {
       diamant: { eyebrow: '◆ The master cards',  title: 'Diamond' },
-      or:      { eyebrow: '? The card to win',    title: 'Gold' },
+      or:      { eyebrow: '★ Our rising stars', title: 'Gold' },
       argent:  { eyebrow: '● Our loyal allies',   title: 'Silver' },
       bronze:  { eyebrow: '▲ Our first supporters', title: 'Bronze' },
       special: { eyebrow: '★ The joker',          title: 'Special' },
@@ -418,48 +436,15 @@ export const en: Translation = {
       readMore: 'Read more →',
       watch: 'Watch the video',
       empty: 'The first content from our partners is coming soon. Check back with us!',
+      by: 'By',
+      langNote: 'This post was originally written in French.',
+      formats: { blog: 'Blog post', video: 'Video' },
     },
-    posts: [],
-    packages: {
-      title: 'Our partnership packages',
-      text: 'Choose the level that suits you.',
-      show: 'See all benefits ▾',
-      hide: 'Hide benefits ▴',
-      header: 'Included benefits',
-      included: 'Included',
-      notIncluded: 'Not included',
-      tiers: [
-        { name: 'Bronze',  price: '$300',   perks: ['Booth at Careers Without Borders', 'ISF-ÉTS and ÉTS newsletter'] },
-        { name: 'Silver',  price: '$500',   perks: ['Everything in Bronze', 'Small clickable logo on our website', 'Group thank-you'] },
-        { name: 'Gold',    price: '$1,000', perks: ['Everything in Silver', 'Medium logo, screens and t-shirts', 'Announcement on our social media'] },
-        { name: 'Diamond', price: '$1,500', perks: ['Everything in Gold', 'Large logo and main banner', '5–10 min speaking slot', 'Dedicated blog post or podcast episode'] },
-      ],
-      table: [
-        { title: 'Presence at the event', rows: [
-          { label: 'Attendance at Careers Without Borders + booth',              values: ['●', '●', '●', '●'] },
-          { label: 'Priority in booth location choice',                           values: ['Priority 4', 'Priority 3', 'Priority 2', 'Priority 1'] },
-          { label: 'Speaking slot in front of students',                          values: ['—', '—', '—', '5–10 min'] },
-          { label: 'Prize / contest in the company\'s name',                      values: ['—', '—', '—', '●'] },
-          { label: 'Photo of a key team member displayed on ÉTS columns',         values: ['—', '—', '—', '●'] },
-        ] },
-        { title: 'Digital visibility', rows: [
-          { label: 'Feature in the ISF-ÉTS and ÉTS newsletter',                   values: ['●', '●', '●', '●'] },
-          { label: 'Company announcement on our social media before the event',   values: ['—', '—', '●', '●'] },
-          { label: 'Thank-you on our social media after the event',               values: ['—', 'Group', 'Group', 'Individual'] },
-          { label: 'Dedicated blog post or podcast episode',                      values: ['—', '—', '—', '●'] },
-        ] },
-        { title: 'Physical visibility', rows: [
-          { label: 'Clickable logo on our website (link to your site)',           values: ['—', 'Small', 'Medium', 'Large'] },
-          { label: 'Logo size on posters on event day',                           values: ['—', 'Small', 'Medium', 'Large'] },
-          { label: 'Logo displayed on auditorium screens',                        values: ['—', '—', '●', '●'] },
-          { label: 'Logo on volunteer t-shirts',                                  values: ['—', '—', '●', '●'] },
-          { label: 'Logo on the main event banner',                               values: ['—', '—', '—', '●'] },
-        ] },
-        { title: 'Relationship & recognition', rows: [
-          { label: 'Attendance at our networking activities',                     values: ['—', '—', '●', '●'] },
-          { label: 'Mention in the annual impact report',                         values: ['—', '—', '●', '●'] },
-        ] },
-      ],
+    posts: [laSallePost],
+    cta: {
+      title: 'Want to join our team?',
+      text: 'For more information about our partnerships or to find out how to become a partner, get in touch! We\'ll be happy to answer you.',
+      btn: 'Contact us',
     },
   },
   footer: {

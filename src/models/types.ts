@@ -12,6 +12,7 @@ export interface Translation {
     projectsDropdown: {
       histoire:  string;
       carrieres: string;
+      tournoi:   string;
       regards:   string;
       collecte:  string;
       autres:    string;
@@ -58,6 +59,15 @@ export interface Translation {
       conference?: string[];
     };
     carrieres: { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
+    tournoi: {
+      label: string; title: string; subtitle: string;
+      description: string;
+      partners: { name: string; logo: string }[];
+      photos: string[];
+      edition: string;
+      comingSoon: string;
+      sports: { name: string; photos: string[] }[];
+    };
     regards:   { label: string; title: string; subtitle: string; description: string; partners: { name: string; logo: string }[]; photos: string[] };
     collecte: {
       label: string; title: string; subtitle: string;
@@ -132,19 +142,14 @@ export interface Translation {
       special: { eyebrow: string; title: string };
     };
     orSlot: { hiddenTitle: string; hiddenHint: string; title: string; text: string; btn: string };
-    vlog: { eyebrow: string; title: string; text: string; readMore: string; watch: string; empty: string };
-    posts: { partner: string; format: string; title: string; excerpt: string; text: string; video?: string; image?: string }[];
-    packages: {
-      title: string;
-      text: string;
-      show: string;
-      hide: string;
-      header: string;
-      included: string;
-      notIncluded: string;
-      tiers: { name: string; price: string; perks: string[] }[];
-      table: { title: string; rows: { label: string; values: string[] }[] }[];
+    vlog: {
+      eyebrow: string; title: string; text: string;
+      readMore: string; watch: string; empty: string;
+      by: string; langNote: string;
+      formats: { blog: string; video: string };
     };
+    posts: PartnerPost[];
+    cta: { title: string; text: string; btn: string };
   };
   footer: {
     description: string;
@@ -172,4 +177,19 @@ export interface Partner {
   initials: string;
   logo?: string;
   url?: string;
+}
+
+export interface PartnerPost {
+  partner: string;
+  format: 'blog' | 'video';
+  lang?: Locale;
+  author?: string;
+  title: string;
+  excerpt: string;
+  quote?: string;
+  intro?: string;
+  sections?: { heading: string; body: string }[];
+  video?: string;
+  image?: string;
+  logo?: string;
 }

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Navbar : transparent au top, blanche en scrollant ──
-  const navbar = document.querySelector('.navbar');
+  /*const navbar = document.querySelector('.navbar');
   if (navbar) {
     // Délai pour laisser le navigateur stabiliser le scroll au chargement
     setTimeout(() => {
@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('scroll', checkNav, { passive: true });
       checkNav();
     }, 50);
+  }*/
+
+  // ── Navbar : transparente au top, blanche en scrollant ──
+  // Sur la page Partenaires (fond clair), elle reste toujours blanche.
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    const solidNav = document.querySelector('.partners-page') !== null;
+    const checkNav = () => navbar.classList.toggle('scrolled', solidNav || window.scrollY > 60);
+    window.addEventListener('scroll', checkNav, { passive: true });
+    checkNav();
   }
 
   // ── Mobile nav toggle ──
@@ -290,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // ── Effet typing sur la description ──
-  const typedEl = document.querySelector('.typed-text');
+  /*const typedEl = document.querySelector('.typed-text');
   if (typedEl) {
     const fullText = typedEl.dataset.text || typedEl.textContent || '';
     typedEl.textContent = '';
@@ -302,6 +312,24 @@ document.addEventListener('DOMContentLoaded', () => {
         typedEl.textContent += fullText[i];
         i++;
         if (i >= fullText.length) clearInterval(interval);
+      }, 18);
+    }, { threshold: 0.3 });
+    typeObs.observe(typedEl);
+  }*/
+
+  // ── Effet typing sur la description ──
+  const typedEl = document.querySelector('.typed-text');
+  if (typedEl) {
+    const chars = Array.from(typedEl.dataset.text || typedEl.textContent || '');
+    typedEl.textContent = '';
+    let i = 0;
+    const typeObs = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      typeObs.unobserve(typedEl);
+      const interval = setInterval(() => {
+        typedEl.textContent += chars[i];
+        i++;
+        if (i >= chars.length) clearInterval(interval);
       }, 18);
     }, { threshold: 0.3 });
     typeObs.observe(typedEl);
@@ -474,17 +502,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // Bouton « Voir tous les avantages »
-  const perksToggle = document.getElementById('perksToggle');
-  const perksTable = document.getElementById('perksTable');
-  if (perksToggle && perksTable) {
-    perksToggle.addEventListener('click', () => {
-      const open = perksTable.classList.toggle('open');
-      perksToggle.setAttribute('aria-expanded', String(open));
-      perksToggle.textContent = open ? perksToggle.dataset.hide : perksToggle.dataset.show;
-    });
-  }
 
   // Billets Vlog/Blog des partenaires Diamant
   const postModal = document.getElementById('postModal');

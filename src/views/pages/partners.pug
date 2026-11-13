@@ -4,7 +4,7 @@ block content
   - var P = t.partners
   - var list = partnersList || []
   - var byTier = function (k) { return list.filter(function (p) { return p.tier === k; }); }
-  - var dia = byTier('diamant'), orL = byTier('or'), arg = byTier('argent'), bro = byTier('bronze'), spe = byTier('special')
+  - var dia = byTier('diamant'), orL = byTier('or'), arg = byTier('argent'), bro = byTier('bronze')
   - var countLbl = function (n) { return n + ' ' + (n > 1 ? P.partnerPlural : P.partnerSingular); }
 
   mixin tierHead(num, key)
@@ -51,34 +51,29 @@ block content
           p.ph-text #{P.heroText}
           .ph-actions
             a.btn.btn--dark(href=`/${locale}/contact`) #{P.joinBtn}
-            a.btn.btn--line(href='#forfaits') #{P.packagesBtn}
+            a.btn.btn--line(href='#tier-diamant') #{P.packagesBtn}
 
-        .hand(role='img' aria-label=P.handLabel)
-          .hpos.hp1
+        //- Éventail : chaque carte mène à sa section
+        nav.hand(aria-label=P.handLabel)
+          a.hpos.hp1(href='#tier-bronze')
             .hcard.hcard--bronze
               span.hcard-suit ▲
               div
                 .hcard-title #{P.tiers.bronze.title}
                 .hcard-count #{countLbl(bro.length)}
-          .hpos.hp2
+          a.hpos.hp2(href='#tier-argent')
             .hcard.hcard--argent
               span.hcard-suit ●
               div
                 .hcard-title #{P.tiers.argent.title}
                 .hcard-count #{countLbl(arg.length)}
-          .hpos.hp3
-            .hcard.hcard--special
-              span.hcard-suit ★
-              div
-                .hcard-title #{P.tiers.special.title}
-                .hcard-count #{countLbl(spe.length)}
-          .hpos.hp4
+          a.hpos.hp3(href='#tier-or')
             .hcard.hcard--or
-              span.hcard-suit ?
+              span.hcard-suit ★
               div
                 .hcard-title #{P.tiers.or.title}
                 .hcard-count #{orL.length ? countLbl(orL.length) : P.orHandLabel}
-          .hpos.hp5
+          a.hpos.hp4(href='#tier-diamant')
             .hcard.hcard--diamant
               span.hcard-suit ◆
               div
@@ -86,7 +81,7 @@ block content
                 .hcard-count #{countLbl(dia.length)}
 
     //- ── 01 DIAMANT ──
-    section.tier-section(aria-labelledby='t-diamant')
+    section.tier-section#tier-diamant(aria-labelledby='t-diamant')
       .container
         +tierHead('01', 'diamant')
         .pgrid.pgrid--diamant
@@ -95,19 +90,19 @@ block content
               +pcard(p, 'diamant', '◆', 'D', 18)
 
     //- ── 02 OR ──
-    section.tier-section(aria-labelledby='t-or')
+    section.tier-section#tier-or(aria-labelledby='t-or')
       .container
         +tierHead('02', 'or')
         if orL.length
           .pgrid.pgrid--argent
             each p, i in orL
               .deal(style=`animation-delay:${(i * 0.09).toFixed(2)}s`)
-                +pcard(p, 'or', '?', 'O', 16)
+                +pcard(p, 'or', '★', 'O', 16)
         else
           a.flip.or-slot(href=`/${locale}/contact` aria-label=`${P.orSlot.title} — ${P.orSlot.text}`)
             .flip-inner
               .face.face--front
-                span.face-mark ?
+                span.face-mark ★
                 span.face-title #{P.orSlot.hiddenTitle}
                 span.face-hint #{P.orSlot.hiddenHint}
               .face.face--back
@@ -116,7 +111,7 @@ block content
                 span.face-btn #{P.orSlot.btn}
 
     //- ── 03 ARGENT ──
-    section.tier-section(aria-labelledby='t-argent')
+    section.tier-section#tier-argent(aria-labelledby='t-argent')
       .container
         +tierHead('03', 'argent')
         .pgrid.pgrid--argent
@@ -125,23 +120,13 @@ block content
               +pcard(p, 'argent', '●', 'A', 14)
 
     //- ── 04 BRONZE ──
-    section.tier-section(aria-labelledby='t-bronze')
+    section.tier-section#tier-bronze(aria-labelledby='t-bronze')
       .container
         +tierHead('04', 'bronze')
         .pgrid.pgrid--bronze
           each p, i in bro
             .deal(style=`animation-delay:${(i * 0.09).toFixed(2)}s`)
               +pcard(p, 'bronze', '▲', 'B', 12)
-
-    //- ── 05 SPÉCIAL ──
-    if spe.length
-      section.tier-section(aria-labelledby='t-special')
-        .container
-          +tierHead('05', 'special')
-          .pgrid.pgrid--special
-            each p, i in spe
-              .deal(style=`animation-delay:${(i * 0.09).toFixed(2)}s`)
-                +pcard(p, 'special', '★', '', 14)
 
     //- ── VLOG / BLOG ──
     section.pvlog#vlog(aria-labelledby='t-vlog')
@@ -153,25 +138,49 @@ block content
           .pvlog-grid
             each post in P.posts
               article.pvlog-card
-                .pvlog-media
-                  if post.image
+                if post.image
+                  .pvlog-media
                     img(src=post.image alt='' loading='lazy')
-                  span.pvlog-format #{post.format}
-                  if post.video
-                    span.play
-                      svg(width='24' height='24' viewBox='0 0 24 24' aria-hidden='true')
-                        path(d='M8 5v14l11-7z' fill='#FFFFFF')
+                    span.pvlog-format #{P.vlog.formats[post.format]}
+                    if post.video
+                      span.play
+                        svg(width='24' height='24' viewBox='0 0 24 24' aria-hidden='true')
+                          path(d='M8 5v14l11-7z' fill='#FFFFFF')
+                else if post.logo
+                  .pvlog-media.pvlog-media--logo
+                    img(src=post.logo alt=post.partner loading='lazy')
+                    span.pvlog-format #{P.vlog.formats[post.format]}
+                else
+                  .pvlog-media.pvlog-media--text
+                    span.pvlog-quote-mark(aria-hidden='true') “
+                    span.pvlog-format #{P.vlog.formats[post.format]}
                 .pvlog-body
                   span.pvlog-partner #{post.partner}
                   h3 #{post.title}
+                  if post.author
+                    span.pvlog-author #{P.vlog.by} #{post.author}
                   p #{post.excerpt}
                   button.pvlog-more(type='button') #{P.vlog.readMore}
+
+                //- Contenu complet, affiché dans la fenêtre
                 .post-full(hidden)
                   if post.image
                     img.post-full-img(src=post.image alt='')
+                  else if post.logo
+                    img.post-full-logo(src=post.logo alt=post.partner)
                   span.pvlog-partner #{post.partner}
                   h3.post-full-title #{post.title}
-                  p.post-full-text #{post.text}
+                  if post.author
+                    p.post-full-author #{P.vlog.by} #{post.author}
+                  if post.lang && post.lang !== locale && P.vlog.langNote
+                    p.post-full-lang #{P.vlog.langNote}
+                  if post.quote
+                    blockquote.post-full-quote #{post.quote}
+                  if post.intro
+                    p.post-full-text #{post.intro}
+                  each sec in post.sections || []
+                    h4.post-full-heading #{sec.heading}
+                    p.post-full-text #{sec.body}
                   if post.video
                     a.btn.btn--primary(href=post.video target='_blank' rel='noopener') ▶ #{P.vlog.watch}
         else
@@ -182,50 +191,15 @@ block content
       button.post-close#postClose(type='button' aria-label='Fermer') ✕
       .post-modal-body#postModalBody
 
-    //- ── FORFAITS ──
-    section.packages#forfaits(aria-labelledby='t-packages')
+    //- ── DEVENIR PARTENAIRE ──
+    section.partners-cta(aria-labelledby='t-cta')
       .container
-        .packages-box
-          .packages-head
-            div
-              h2#t-packages #{P.packages.title}
-              p #{P.packages.text}
-            button.perks-toggle#perksToggle(type='button' aria-expanded='false' aria-controls='perksTable' data-show=P.packages.show data-hide=P.packages.hide) #{P.packages.show}
-
-          .packages-grid
-            each tier, i in P.packages.tiers
-              .package
-                .package-head(class=`package-head--${i}`)
-                  .package-name #{tier.name}
-                  .package-price #{tier.price}
-                ul.package-perks
-                  each perk in tier.perks
-                    li #{perk}
-
-          .perks-table#perksTable
-            .perks-scroll
-              table
-                thead
-                  tr
-                    th(scope='col') #{P.packages.header}
-                    each tier, i in P.packages.tiers
-                      th(scope='col' class=`th--${i}`)
-                        | #{tier.name}
-                        small #{tier.price}
-                each sec in P.packages.table
-                  tbody
-                    tr.perks-sec
-                      th(colspan='5' scope='colgroup') #{sec.title}
-                    each row in sec.rows
-                      tr
-                        th(scope='row') #{row.label}
-                        each v, i in row.values
-                          td
-                            if v === '●'
-                              span.perk-dot(class=`perk-dot--${i}` aria-hidden='true')
-                              span.sr-only #{P.packages.included}
-                            else if v === '—'
-                              span.perk-none(aria-hidden='true') —
-                              span.sr-only #{P.packages.notIncluded}
-                            else
-                              | #{v}
+        .partners-cta__box
+          .partners-cta__suits(aria-hidden='true')
+            span ◆
+            span ★
+            span ●
+            span ▲
+          h2#t-cta #{P.cta.title}
+          p #{P.cta.text}
+          a.btn.btn--primary(href=`/${locale}/contact`) #{P.cta.btn}
