@@ -1,0 +1,113 @@
+/* ── FOOTER ── */
+.footer {
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 64px 0 0;
+  margin-top: 0;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 32px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.footer h4 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.footer-brand p {
+  font-size: 13px;
+  color: rgba(255,255,255,.45);
+  max-width: 280px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,.55);
+  transition: all var(--transition);
+}
+.footer-socials a:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+.footer-nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 16px;
+  list-style: none;
+  padding: 0;
+}
+.footer-nav ul li ul.footer-sub-links {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 12px;
+  margin-top: 5px;
+  padding-left: 10px;
+  flex-direction: unset;
+}
+.footer-sub-links a {
+  font-size: 11px;
+  color: rgba(255,255,255,.3);
+  transition: color var(--transition);
+  line-height: 1.4;
+}
+.footer-sub-links a:hover {
+  color: var(--white);
+}
+.footer-nav a {
+  font-size: 13px;
+  color: rgba(255,255,255,.45);
+  transition: color var(--transition);
+}
+.footer-nav a:hover {
+  color: var(--white);
+}
+.footer-contact p {
+  font-size: 13px;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
+.footer-bottom {
+  padding: 18px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 12px;
+  color: rgba(255,255,255,.25);
+}
+
+/* ── RESPONSIVE FOOTER ── */
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

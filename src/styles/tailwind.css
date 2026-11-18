@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@source "../views";
+@source "../public/js";
+
+@theme {
+  --color-brand-red: #D42B2B;
+  --color-brand-red-dark: #A81E1E;
+  --color-brand-red-light: #F5E5E5;
+  --color-brand-accent: #F0A500;
+  --color-brand-cream: #FAFAF8;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
