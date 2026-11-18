@@ -1,0 +1,120 @@
+/* ── ABOUT PREVIEW & GLOBE ── */
+.about-preview {
+  padding: 88px 0;
+}
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.about-visual,
+.about__image {
+  position: relative;
+}
+.about-illustration {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.about-illustration svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.placeholder-img,
+.about-blob {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--red-light), var(--cream));
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.about__text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+.about__text p {
+  font-size: 17px;
+  color: var(--gray-600);
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.link-more {
+  font-weight: 600;
+  color: var(--red);
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--transition);
+}
+.link-more:hover {
+  gap: 12px;
+}
+
+/* ── GLOBE dans about-preview ── */
+.globe-scene {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.globe-ring-a {
+  position: absolute;
+  inset: -22px;
+  border-radius: 50%;
+  border: 2px dashed rgba(212,43,43,.55);
+  animation: spin 25s linear infinite;
+  pointer-events: none;
+}
+.globe-ring-b {
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(212,43,43,.25);
+  animation: spin 15s linear infinite reverse;
+  pointer-events: none;
+}
+.globe-emoji {
+  font-size: 160px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 8px 28px rgba(212,43,43,.3));
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── RESPONSIVE ABOUT ── */
+@media (max-width: 1024px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about-illustration,
+  .placeholder-img {
+    max-width: 320px;
+    margin: 0 auto 40px;
+  }
+}

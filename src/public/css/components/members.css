@@ -1,0 +1,99 @@
+/* ── MEMBERS ── */
+.members-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+.member-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 26px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,.05);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.member-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--red);
+  transform: scaleX(0);
+  transition: transform .4s ease;
+}
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.member-card:hover::after {
+  transform: scaleX(1);
+}
+.member-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--red-light), var(--cream));
+  border: 3px solid var(--red-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--red);
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.member-card h3 {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.member-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+.member-program {
+  font-size: 13px;
+  color: var(--gray-400);
+}
+.member-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  color: #0077b5;
+  transition: color var(--transition), transform var(--transition);
+}
+.member-linkedin:hover {
+  color: #005885;
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE MEMBERS ── */
+@media (max-width: 768px) {
+  .board-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .board-grid {
+    grid-template-columns: 1fr;
+  }
+}

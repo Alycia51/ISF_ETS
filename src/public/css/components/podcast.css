@@ -1,0 +1,300 @@
+/* ── BLOG / PODCASTS ── */
+.blog-section {
+  padding: 60px 0 100px;
+  background: var(--cream);
+}
+.blog-intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.blog-intro-text {
+  font-size: 16px;
+  color: var(--gray-600);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Scène éventail — centré horizontalement, large */
+.fan-stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 500px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.fan-container {
+  position: relative;
+  width: 300px;
+  height: 440px;
+}
+
+/* Carte de base */
+.podcast-card {
+  position: absolute;
+  top: 0; left: 0;
+  width: 270px; height: 410px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.18), 0 2px 8px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.08);
+  cursor: pointer;
+  transition: transform .5s cubic-bezier(.4,0,.2,1), box-shadow .4s ease;
+  transform-origin: bottom center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  will-change: transform;
+}
+.podcast-card::before {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--red), var(--accent));
+  flex-shrink: 0;
+}
+.podcast-card:not(.hovered) {
+  transition: transform .5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Miniature */
+.card-thumb-link {
+  display: block;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.card-thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity .3s;
+}
+.card-thumb-link:hover .card-thumbnail img {
+  opacity: .85;
+}
+.card-thumb-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #2d0a0a, var(--red));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+/* Corps */
+.card-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.3;
+}
+.card-guest {
+  font-size: 13px;
+  color: var(--red);
+  font-weight: 600;
+}
+.card-desc {
+  font-size: 12px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* Backdrop */
+.blog-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2999;
+  background: rgba(0,0,0,.65);
+  backdrop-filter: blur(6px);
+}
+.blog-backdrop.show {
+  display: block;
+}
+
+/* Modal podcast */
+.podcast-modal {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(520px, 92vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: 22px;
+  box-shadow: 0 40px 100px rgba(0,0,0,.5);
+  z-index: 3000;
+  flex-direction: column;
+  animation: cardPop .35s cubic-bezier(.34,1.56,.64,1);
+}
+.podcast-modal.show {
+  display: flex;
+}
+
+@keyframes cardPop {
+  from { transform: translate(-50%,-47%) scale(.9); opacity:.5; }
+  to   { transform: translate(-50%,-50%) scale(1);  opacity:1; }
+}
+
+.podcast-modal-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  z-index: 10;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.55);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+.podcast-modal-close:hover {
+  background: var(--red);
+}
+
+.podcast-modal-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 22px 22px 0 0;
+  flex-shrink: 0;
+}
+.podcast-modal-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-thumb-placeholder-lg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2d0a0a, var(--red));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  aspect-ratio: 16/9;
+}
+
+.podcast-modal-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.podcast-modal-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.25;
+}
+.podcast-modal-guest {
+  font-size: 15px;
+  color: var(--red);
+  font-weight: 600;
+}
+.podcast-modal-desc {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+.podcast-modal-members {
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+.card-members-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.podcast-modal-members-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.podcast-modal-members-list li {
+  font-size: 13px;
+  color: var(--gray-600);
+}
+.podcast-modal-members-list li::before {
+  content: '• ';
+  color: var(--red);
+}
+
+.card-watch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  color: var(--white);
+  padding: 13px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  transition: background var(--transition), transform var(--transition);
+  align-self: flex-start;
+}
+.card-watch-btn:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.fan-hint {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--gray-400);
+  letter-spacing: .04em;
+}
+
+/* ── RESPONSIVE BLOG / PODCASTS ── */
+@media (max-width: 768px) {
+  .fan-stage {
+    min-height: unset;
+    align-items: center;
+    flex-direction: column;
+  }
+  .fan-container {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .podcast-card {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+  }
+}

@@ -1,0 +1,95 @@
+/* ── EVENTS ── */
+.events-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.event-card {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 28px;
+  align-items: start;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,.05);
+  border-left: 4px solid var(--red);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.event-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+}
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 14px 6px;
+  text-align: center;
+  min-width: 0;
+}
+.event-date .day {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.event-date .day--range {
+  font-size: 20px;
+  white-space: nowrap;
+}
+.event-date .month {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  opacity: .9;
+}
+.event-type {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--red);
+  background: var(--red-glow);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 7px;
+}
+.event-info h3 {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.event-location {
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-bottom: 9px;
+}
+.event-info p:last-child {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+/* ── RESPONSIVE EVENTS ── */
+@media (max-width: 768px) {
+  .event-card {
+    grid-template-columns: 76px 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+}
